@@ -1,31 +1,19 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-export function NavLinks({ currPath }: { currPath: string }) {
-    return (
-        <div className="collapse navbar-collapse" id="navbarNav">
-            <a className="nav-link active" href={currPath === "/" ? "#" : "/"}>
-                Home
-            </a>
-            <a className="nav-link" href={currPath === "/blog" ? "#" : "/blog"}>
-                Blog
-            </a>
-            <a
-                className="nav-link"
-                href={currPath === "/roadmap" ? "#" : "/roadmap"}
-            >
-                Roadmap
-            </a>
-            <a
-                className="nav-link"
-                href={currPath === "/convert" ? "#" : "/convert"}
-            >
-                JSON Convert Tool
-            </a>
-        </div>
-    );
-}
+/**
+ * returns true if the current path is the same as the target path (i.e. current path is active)
+ *
+ * @param {string} currPath
+ * @param {string} target
+ *
+ * @returns {boolean}
+ */
+const isActive = (currPath: string, target: string): boolean => {
+    return currPath === target;
+};
 
 export default function Navbar() {
     const currPath = usePathname();
@@ -33,23 +21,12 @@ export default function Navbar() {
     return (
         <nav className="navbar sticky-top navbar-expand-md">
             <div className="container-fluid">
-                <a
-                    className="navbar-brand fw-bold technicolor"
-                    href={currPath === "/" ? "#" : "/"}
+                <Link
+                    className="navbar-brand fw-bold"
+                    href={isActive(currPath, "/") ? "#" : "/"}
                 >
                     jhg.app
-                </a>
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <NavLinks currPath={currPath} />
-                </div>
+                </Link>
             </div>
         </nav>
     );

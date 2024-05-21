@@ -4,14 +4,16 @@ export default function Home() {
     return (
         <main>
             <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-bold">Hi! I'm John</h1>
+                <h1 className="display-3 fw-bold text-body-emphasis">
+                    Hi! I'm John
+                </h1>
                 <p className="lead">Welcome to my home on the web.</p>
             </div>
 
             <div className="container py-5">
                 <div className="row flex-md-row-reverse align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0">
-                        <h1 className="display-4 fw-bold text-end technicolor">
+                        <h1 className="display-4 fw-bold text-end">
                             Project spotlight.
                         </h1>
                     </div>
@@ -24,7 +26,7 @@ export default function Home() {
                                     description: "This is my first project.",
                                     link: "https://jhg.app",
                                     linkText: "Visit my site",
-                                    buttonImgPath: "/vercel.svg"
+                                    buttonImgPath: "/link_icons/github-mark.svg"
                                 },
                                 {
                                     title: "Proj2",
@@ -33,16 +35,7 @@ export default function Home() {
                                         "This is my second project. It's a privacy page",
                                     link: "https://jhg.app/privacy",
                                     linkText: "Visit my site",
-                                    buttonImgPath: "/vercel.svg"
-                                },
-                                {
-                                    title: "Proj2",
-                                    subtitle: "Project 2",
-                                    description:
-                                        "This is my second project. It's a privacy page",
-                                    link: "https://jhg.app/privacy",
-                                    linkText: "Visit my site",
-                                    buttonImgPath: "/vercel.svg"
+                                    buttonImgPath: "/link_icons/app.svg"
                                 }
                             ]}
                         />

@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./globals.css";
+import Navbar from "./ui/navbar";
 
 export const metadata: Metadata = {
-    title: "John.com"
+    title: "jhg.app"
 };
 
 export default function RootLayout({
@@ -15,7 +16,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body data-bs-theme="dark">
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }

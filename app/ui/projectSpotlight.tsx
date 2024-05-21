@@ -30,8 +30,8 @@ export function ProjectSpotlight({ projs }: { projs: Array<ProjectContent> }) {
                         <Image
                             src={projs[i].buttonImgPath}
                             alt={`link icon for ${projs[i].title} project`}
-                            width={32}
-                            height={32}
+                            width={24}
+                            height={24}
                         />
                         {projs[i].linkText}
                     </Link>

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "@/app/globals.css";
 import Navbar from "@/app/ui/navbar";
+import { NewNav } from "@/app/ui/navbar";
 
 export const metadata: Metadata = {
     title: "jhg.app"
@@ -17,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body data-bs-theme="dark">
-                <Navbar />
+                <NewNav />
                 {children}
             </body>
         </html>

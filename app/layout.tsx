@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 import "bootstrap/dist/css/bootstrap.css";
 
-import "./globals.css";
-import Navbar from "./ui/navbar";
+import "@/app/globals.css";
+import Navbar from "@/app/ui/navbar";
 
 export const metadata: Metadata = {
     title: "jhg.app"

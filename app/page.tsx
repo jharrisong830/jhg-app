@@ -70,10 +70,9 @@ export default function Home() {
                         <ProjectSpotlight
                             projs={projectData.slice(0, 2)} // spotlight the two most recent projects
                         />
-                        <p>
-                            View more projects{" "}
-                            <Link href="/projects">here</Link>.
-                        </p>
+                        <Link href="/projects" className="btn btn-light">
+                            View More Projects
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,29 +1,31 @@
 {
     "name": "jhg-app",
-    "version": "0.1.0",
-    "private": true,
+    "version": "1.0.0",
+    "main": "app.ts",
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
+        "start": "node ./app.ts",
+        "test": "echo \"Error: no test specified\" && exit 1",
         "commit": "npx prettier . --write && git add -A && git commit"
     },
+    "author": "John Graham",
+    "license": "MIT",
+    "description": "",
     "dependencies": {
+        "@types/express-session": "^1.18.0",
         "bootstrap": "^5.3.3",
-        "next": "14.2.3",
-        "react": "^18",
+        "express": "^4.19.2",
+        "express-session": "^1.18.0",
+        "react": "^18.3.1",
         "react-bootstrap": "^2.10.2",
-        "react-dom": "^18"
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
         "@types/bootstrap": "^5.2.10",
-        "@types/node": "^20",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "eslint": "^8",
-        "eslint-config-next": "14.2.3",
-        "prettier": "^3.2.5",
-        "typescript": "^5"
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.14.2",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "prettier": "^3.3.2",
+        "typescript": "^5.4.5"
     }
 }

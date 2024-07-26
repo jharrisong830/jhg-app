@@ -15,8 +15,9 @@ import Container from "react-bootstrap/container";
 const isActive = (currPath: string, target: string): boolean => {
     console.log("curr = " + currPath);
     console.log("targ = " + target);
-    if (currPath.endsWith("/") && currPath.length !== 1) currPath = currPath.slice(0, currPath.length - 1);
-    return currPath === target; // check for trailing 
+    if (currPath.endsWith("/") && currPath.length !== 1)
+        currPath = currPath.slice(0, currPath.length - 1);
+    return currPath === target; // check for trailing
 };
 
 export default function Navbar() {
@@ -53,12 +54,18 @@ export default function Navbar() {
                             as={Link}
                             className={
                                 "px-2 mx-2" +
-                                (isActive(window.location.pathname, "/json-table")
+                                (isActive(
+                                    window.location.pathname,
+                                    "/json-table"
+                                )
                                     ? " active"
                                     : "")
                             }
                             to={
-                                isActive(window.location.pathname, "/json-table")
+                                isActive(
+                                    window.location.pathname,
+                                    "/json-table"
+                                )
                                     ? "#"
                                     : "/json-table"
                             }

@@ -5,10 +5,12 @@ import { fetchAllProjects } from "./api/projects";
 
 export default function Projects() {
     const [projectData, setProjectData] = useState<Array<ProjectContent>>([]);
-    
+
     useEffect(() => {
         const asyncWrapper = async () => {
-            setProjectData(await fetchAllProjects("http://localhost:8000/projects"));
+            setProjectData(
+                await fetchAllProjects("http://localhost:8000/projects")
+            );
         };
         asyncWrapper();
         return;
@@ -18,7 +20,7 @@ export default function Projects() {
     for (let i = 0; i < projectData.length; i++) {
         children.push(<ProjectCard project={projectData[i]} />);
     }
-    
+
     return (
         <main>
             <div className="px-4 py-5 text-center">

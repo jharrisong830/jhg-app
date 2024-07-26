@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./Home";
 import Projects from "./Projects";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/index.css";
@@ -12,24 +12,30 @@ import "./styles/index.css";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <>
-        <Navbar />
-        <Home />
-        </>
+        element: (
+            <>
+                <Navbar />
+                <Home />
+            </>
+        )
     },
     {
         path: "/projects",
-        element: <>
-        <Navbar />
-        <Projects />
-        </>
+        element: (
+            <>
+                <Navbar />
+                <Projects />
+            </>
+        )
     },
     {
         path: "/json-table",
-        element: <>
-        <Navbar />
-        <Home />
-        </>
+        element: (
+            <>
+                <Navbar />
+                <Home />
+            </>
+        )
     }
 ]);
 

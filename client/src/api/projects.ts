@@ -7,10 +7,12 @@ export interface ProjectContent {
     buttonImgPath: string;
 }
 
-export const fetchAllProjects = async (url: string): Promise<Array<ProjectContent>> => {
+export const fetchAllProjects = async (
+    url: string
+): Promise<Array<ProjectContent>> => {
     const response = await fetch(url);
     return await response.json();
-}
+};
 
 const exportedMethods = {
     fetchAllProjects

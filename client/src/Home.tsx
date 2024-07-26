@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/index.css";
+import ProjectSpotlight from "./components/ProjectSpotlight";
 
 export default function Home() {
     return (
@@ -65,6 +65,7 @@ export default function Home() {
                         </h1>
                     </div>
                     <div className="col-md-8">
+                        <ProjectSpotlight />
                         <a href="/projects" className="btn btn-light">
                             View More Projects
                         </a>

@@ -12,7 +12,10 @@ import Container from "react-bootstrap/container";
  * @returns {boolean}
  */
 const isActive = (currPath: string, target: string): boolean => {
-    return currPath === target;
+    console.log("curr = " + currPath);
+    console.log("targ = " + target);
+    if (currPath.endsWith("/") && currPath.length !== 1) currPath = currPath.slice(0, currPath.length - 1);
+    return currPath === target; // check for trailing 
 };
 
 export default function Navbar() {
@@ -21,7 +24,7 @@ export default function Navbar() {
             <Container className="m-0" fluid>
                 <NB.Brand
                     className="fw-bold"
-                    href={isActive(window.location.href, "/") ? "#" : "/"}
+                    href={isActive(window.location.pathname, "/") ? "#" : "/"}
                 >
                     jhg.app
                 </NB.Brand>
@@ -31,12 +34,12 @@ export default function Navbar() {
                         <Nav.Link
                             className={
                                 "px-2 mx-2" +
-                                (isActive(window.location.href, "/projects")
+                                (isActive(window.location.pathname, "/projects")
                                     ? " active"
                                     : "")
                             }
                             href={
-                                isActive(window.location.href, "/projects")
+                                isActive(window.location.pathname, "/projects")
                                     ? "#"
                                     : "/projects"
                             }
@@ -46,12 +49,12 @@ export default function Navbar() {
                         <Nav.Link
                             className={
                                 "px-2 mx-2" +
-                                (isActive(window.location.href, "/json-table")
+                                (isActive(window.location.pathname, "/json-table")
                                     ? " active"
                                     : "")
                             }
                             href={
-                                isActive(window.location.href, "/json-table")
+                                isActive(window.location.pathname, "/json-table")
                                     ? "#"
                                     : "/json-table"
                             }

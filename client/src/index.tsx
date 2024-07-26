@@ -12,15 +12,24 @@ import "./styles/index.css";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />
+        element: <>
+        <Navbar />
+        <Home />
+        </>
     },
     {
         path: "/projects",
-        element: <Projects />
+        element: <>
+        <Navbar />
+        <Projects />
+        </>
     },
     {
         path: "/json-table",
-        element: <Home />
+        element: <>
+        <Navbar />
+        <Home />
+        </>
     }
 ]);
 
@@ -30,7 +39,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <Navbar />
         <RouterProvider router={router} />
     </React.StrictMode>
 );

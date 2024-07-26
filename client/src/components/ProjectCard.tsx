@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { type ProjectContent } from "../api/projects";
 
@@ -13,7 +14,7 @@ export default function ProjectCard({ project }: { project: ProjectContent }) {
                 <p className="card-text text-body-emphasis">
                     {project.description}
                 </p>
-                <a href={project.link} className="btn btn-light icon-link">
+                <Link to={project.link} className="btn btn-light icon-link">
                     <img
                         src={project.buttonImgPath}
                         alt={`link icon for ${project.title} project`}
@@ -21,7 +22,7 @@ export default function ProjectCard({ project }: { project: ProjectContent }) {
                         height={24}
                     />
                     {project.linkText}
-                </a>
+                </Link>
             </div>
         </div>
     );

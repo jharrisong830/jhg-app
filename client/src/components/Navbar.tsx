@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Navbar as NB } from "react-bootstrap";
 import Nav from "react-bootstrap/nav";
 import Container from "react-bootstrap/container";
@@ -23,8 +24,9 @@ export default function Navbar() {
         <NB expand="md" sticky="top" className="customNav px-1">
             <Container className="m-0" fluid>
                 <NB.Brand
+                    as={Link}
                     className="fw-bold"
-                    href={isActive(window.location.pathname, "/") ? "#" : "/"}
+                    to={isActive(window.location.pathname, "/") ? "#" : "/"}
                 >
                     jhg.app
                 </NB.Brand>
@@ -32,13 +34,14 @@ export default function Navbar() {
                 <NB.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link
+                            as={Link}
                             className={
                                 "px-2 mx-2" +
                                 (isActive(window.location.pathname, "/projects")
                                     ? " active"
                                     : "")
                             }
-                            href={
+                            to={
                                 isActive(window.location.pathname, "/projects")
                                     ? "#"
                                     : "/projects"
@@ -47,13 +50,14 @@ export default function Navbar() {
                             Projects
                         </Nav.Link>
                         <Nav.Link
+                            as={Link}
                             className={
                                 "px-2 mx-2" +
                                 (isActive(window.location.pathname, "/json-table")
                                     ? " active"
                                     : "")
                             }
-                            href={
+                            to={
                                 isActive(window.location.pathname, "/json-table")
                                     ? "#"
                                     : "/json-table"

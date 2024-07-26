@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProjectSpotlight from "./components/ProjectSpotlight";
 
 export default function Home() {
@@ -43,9 +44,9 @@ export default function Home() {
                             (Principles of Programming Languages) at Stevens
                             Institute of Technology. You can find more details
                             about my coursework and teaching experience on my{" "}
-                            <a href="https://linkedin.com/in/johngraham830">
+                            <Link to="https://linkedin.com/in/johngraham830">
                                 LinkedIn page
-                            </a>
+                            </Link>
                             .
                         </p>
 
@@ -66,9 +67,9 @@ export default function Home() {
                     </div>
                     <div className="col-md-8">
                         <ProjectSpotlight />
-                        <a href="/projects" className="btn btn-light">
+                        <Link to="/projects" className="btn btn-light">
                             View More Projects
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

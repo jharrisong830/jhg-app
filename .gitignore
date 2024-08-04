@@ -36,7 +36,6 @@ yarn-error.log*
 next-env.d.ts
 
 # adding my own stuff
-package-lock.json
 node_modules/
 build/
 

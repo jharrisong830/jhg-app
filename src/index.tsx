@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./Home";
 import Projects from "./Projects";
+import JSONTable from "./JSONTable";
 import Navbar from "./components/Navbar";
 
 import "bootstrap/dist/css/bootstrap.css";
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         element: (
             <>
                 <Navbar />
-                <Home />
+                <JSONTable />
             </>
         )
     }

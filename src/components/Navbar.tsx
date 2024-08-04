@@ -13,8 +13,6 @@ import Container from "react-bootstrap/container";
  * @returns {boolean}
  */
 const isActive = (currPath: string, target: string): boolean => {
-    console.log("curr = " + currPath);
-    console.log("targ = " + target);
     if (currPath.endsWith("/") && currPath.length !== 1)
         currPath = currPath.slice(0, currPath.length - 1);
     return currPath === target; // check for trailing

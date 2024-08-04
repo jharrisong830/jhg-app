@@ -6,15 +6,15 @@ import { fetchAllProjects } from "./api/projects";
 export default function Projects() {
     const [projectData, setProjectData] = useState<Array<ProjectContent>>([]);
 
-    useEffect(() => {
-        const asyncWrapper = async () => {
-            setProjectData(
-                await fetchAllProjects("http://localhost:8000/projects")
-            );
-        };
-        asyncWrapper();
-        return;
-    });
+    // useEffect(() => {
+    //     const asyncWrapper = async () => {
+    //         setProjectData(
+    //             await fetchAllProjects("http://localhost:8000/projects")
+    //         );
+    //     };
+    //     asyncWrapper();
+    //     return;
+    // });
 
     let children: Array<React.JSX.Element> = [];
     for (let i = 0; i < projectData.length; i++) {

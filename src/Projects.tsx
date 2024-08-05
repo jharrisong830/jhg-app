@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "./components/ProjectCard";
 import { type ProjectContent } from "./api/projects";
-// import { fetchAllProjects } from "./api/projects";
+import { fetchAllProjects } from "./api/projects";
 
 export default function Projects() {
     const [projectData, setProjectData] = useState<Array<ProjectContent>>([]);

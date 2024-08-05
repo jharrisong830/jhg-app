@@ -1,5 +1,5 @@
 {
-    "name": "jhg-app-client",
+    "name": "jhg-app",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

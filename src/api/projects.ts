@@ -15,7 +15,6 @@ export const fetchAllProjects = async (
     url: string
 ): Promise<Array<ProjectContent>> => {
     const response = await fetch(url);
-    await new Promise((resolve) => setTimeout(resolve, 5000));
     return await response.json();
 };
 

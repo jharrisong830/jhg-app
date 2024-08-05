@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from "react";
-import ProjectCard from "./components/ProjectCard";
+import ProjectArray from "./components/ProjectArray";
 import { type ProjectContent } from "./api/projects";
 import { fetchAllProjects } from "./api/projects";
+import { Spinner } from "react-bootstrap";
 
 export default function Projects() {
     const [projectData, setProjectData] = useState<Array<ProjectContent>>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const asyncWrapper = async () => {
             setProjectData(
                 await fetchAllProjects(
-                    "https://gist.githubusercontent.com/jharrisong830/e377cf7f875b7ecaf0fae7eb0fff66d4/raw/4ee174e0338bfd1c9e7b0c31c4b93e51d34cd7a0/projects.json"
+                    "https://gist.githubusercontent.com/jharrisong830/e377cf7f875b7ecaf0fae7eb0fff66d4/raw/5c505f18f135b13f604338efb8f735ef9505a646/projects.json"
                 )
             );
         };
         asyncWrapper();
         return;
-    });
-    
-    let children: Array<React.JSX.Element> = [];
-    for (let i = 0; i < projectData.length; i++) {
-        children.push(<ProjectCard project={projectData[i]} />);
-    }
+    }, []);
+
+    useEffect(() => { // on change of projectData, switch loading based on array contents
+        setIsLoading(projectData.length === 0);
+    }, [projectData]);
 
     return (
         <main>
@@ -32,7 +33,9 @@ export default function Projects() {
                 </p>
             </div>
 
-            <div className="container py-5">{children}</div>
+            <div className="container py-5">
+                {isLoading ? <Spinner /> : <ProjectArray projects={projectData} />}
+            </div>
         </main>
     );
 }

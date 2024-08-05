@@ -17,7 +17,7 @@ export default function Connections() {
                     GitHub
                 </a>
                 <a
-                    href="mailto:johngraham830@icloud.com"
+                    href="mailto:john@jhg.app"
                     className="btn btn-light btn-lg icon-link mx-2 my-2 my-md-0"
                 >
                     <img className="bi" src="/link_icons/at.svg" alt="at symbol (@)" />

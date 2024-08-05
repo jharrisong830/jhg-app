@@ -6,6 +6,7 @@ import Home from "./Home";
 import Projects from "./Projects";
 import JSONTable from "./JSONTable";
 import Navbar from "./components/Navbar";
+import Connections from "./components/Connections";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/index.css";
@@ -47,5 +48,6 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <RouterProvider router={router} />
+        <Connections />
     </React.StrictMode>
 );

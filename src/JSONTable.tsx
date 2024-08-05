@@ -10,7 +10,6 @@ export function generateTableHTML(obj: any): string {
         return tbl;
     } else if (typeof obj === "object") {
         let tbl = `<table class="table table-light table-hover table-bordered"> ${Object.keys(obj).map((k) => `<tr> <th>${k}</th> <td>${generateTableHTML(obj[k])}</td> </tr>`).join('')} </table>`;
-        tbl += `<tr> <td></td> ${Object.keys(obj).map((k) => `<td>${generateTableHTML(obj[k])}</td>`).join('')} </tr> </table>`;
         return tbl;
     } else {
         return obj.toString();

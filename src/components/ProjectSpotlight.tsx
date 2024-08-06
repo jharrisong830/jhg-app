@@ -12,7 +12,7 @@ export default function ProjectSpotlight() {
         const asyncWrapper = async () => {
             setSpotlightProjectData(
                 await fetchSpotlightProjects(
-                    "https://gist.githubusercontent.com/jharrisong830/e377cf7f875b7ecaf0fae7eb0fff66d4/raw/5c505f18f135b13f604338efb8f735ef9505a646/projects.json"
+                    "https://gist.githubusercontent.com/jharrisong830/e377cf7f875b7ecaf0fae7eb0fff66d4/raw/projects.json"
                 )
             );
         };

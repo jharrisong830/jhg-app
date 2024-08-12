@@ -5,7 +5,9 @@ import { fetchSpotlightProjects } from "../api/projects";
 import { Spinner } from "react-bootstrap";
 
 export default function ProjectSpotlight() {
-    const [spotlightProjectData, setSpotlightProjectData] = useState<Array<ProjectContent>>([]);
+    const [spotlightProjectData, setSpotlightProjectData] = useState<
+        Array<ProjectContent>
+    >([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -20,13 +22,18 @@ export default function ProjectSpotlight() {
         return;
     }, []);
 
-    useEffect(() => { // on change of spotlightProjectData, switch loading based on array contents
+    useEffect(() => {
+        // on change of spotlightProjectData, switch loading based on array contents
         setIsLoading(spotlightProjectData.length === 0);
     }, [spotlightProjectData]);
-    
+
     return (
         <div className="card-group my-4 pe-md-2">
-            {isLoading ? <Spinner /> : <ProjectArray projects={spotlightProjectData} />}
+            {isLoading ? (
+                <Spinner />
+            ) : (
+                <ProjectArray projects={spotlightProjectData} />
+            )}
         </div>
     );
 }

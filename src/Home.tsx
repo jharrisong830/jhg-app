@@ -44,7 +44,11 @@ export default function Home() {
                             (Principles of Programming Languages) at Stevens
                             Institute of Technology. You can find more details
                             about my coursework and teaching experience on my{" "}
-                            <Link to="https://linkedin.com/in/johngraham830">
+                            <Link
+                                to="https://linkedin.com/in/johngraham830"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 LinkedIn page
                             </Link>
                             .

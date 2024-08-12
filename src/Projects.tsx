@@ -20,7 +20,8 @@ export default function Projects() {
         return;
     }, []);
 
-    useEffect(() => { // on change of projectData, switch loading based on array contents
+    useEffect(() => {
+        // on change of projectData, switch loading based on array contents
         setIsLoading(projectData.length === 0);
     }, [projectData]);
 
@@ -34,7 +35,11 @@ export default function Projects() {
             </div>
 
             <div className="container py-5">
-                {isLoading ? <Spinner /> : <ProjectArray projects={projectData} />}
+                {isLoading ? (
+                    <Spinner />
+                ) : (
+                    <ProjectArray projects={projectData} />
+                )}
             </div>
         </main>
     );

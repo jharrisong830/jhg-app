@@ -2,12 +2,16 @@ import React from "react";
 import { type ProjectContent } from "../api/projects";
 import ProjectCard from "./ProjectCard";
 
-export default function ProjectArray({ projects }: { projects: Array<ProjectContent> }) {
+export default function ProjectArray({
+    projects
+}: {
+    projects: Array<ProjectContent>;
+}) {
     let children: Array<React.JSX.Element> = [];
 
     for (let i = 0; i < projects.length; i++) {
         children.push(<ProjectCard project={projects[i]} />);
     }
 
-    return (<>{children}</>);
+    return <>{children}</>;
 }

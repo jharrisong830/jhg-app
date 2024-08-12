@@ -23,10 +23,13 @@ export const fetchAllProjects = async (
  * @param url location of project json document
  * @param num number of projects to return (default = 2)
  */
-export const fetchSpotlightProjects = async (url: string, num: number = 2): Promise<Array<ProjectContent>> => {
+export const fetchSpotlightProjects = async (
+    url: string,
+    num: number = 2
+): Promise<Array<ProjectContent>> => {
     const response = await fetchAllProjects(url);
     return response.slice(0, num);
-}
+};
 
 const exportedMethods = {
     fetchAllProjects,

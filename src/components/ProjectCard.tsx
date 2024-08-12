@@ -14,7 +14,12 @@ export default function ProjectCard({ project }: { project: ProjectContent }) {
                 <p className="card-text text-body-emphasis">
                     {project.description}
                 </p>
-                <Link to={project.link} className="btn btn-light icon-link">
+                <Link
+                    to={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-light icon-link"
+                >
                     <img
                         src={project.buttonImgPath}
                         alt={`link icon for ${project.title} project`}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProjectSpotlight from "./components/ProjectSpotlight";
+import CurrentFavoriteMusic from "./components/CurrentFavoriteMusic";
 
 export default function Home() {
     return (
@@ -74,6 +75,17 @@ export default function Home() {
                         <Link to="/projects" className="btn btn-light">
                             View More Projects
                         </Link>
+                    </div>
+                </div>
+
+                <div className="row flex-md-row align-items-center">
+                    <div className="col-md-4 pb-2 pb-md-0">
+                        <h1 className="display-4 fw-bold text-start">
+                            What I'm listening to.
+                        </h1>
+                    </div>
+                    <div className="col-md-8">
+                        <CurrentFavoriteMusic />
                     </div>
                 </div>
             </div>

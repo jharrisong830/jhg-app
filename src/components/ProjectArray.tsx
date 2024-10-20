@@ -1,4 +1,3 @@
-import React from "react";
 import { type ProjectContent } from "../api/projects";
 import ProjectCard from "./ProjectCard";
 

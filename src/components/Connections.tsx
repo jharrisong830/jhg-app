@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Connections() {
     return (
         <div className="container text-center pt-4 pb-5">

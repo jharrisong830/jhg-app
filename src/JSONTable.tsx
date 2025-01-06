@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function generateTableHTML(obj: any): string {
     if (Array.isArray(obj)) {

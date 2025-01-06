@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProjectArray from "./ProjectArray";
 import type { ProjectContent } from "../api/projects";
 import { fetchSpotlightProjects } from "../api/projects";

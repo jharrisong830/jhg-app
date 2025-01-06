@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import ProjectSpotlight from "./components/ProjectSpotlight";
 import CurrentFavoriteMusic from "./components/CurrentFavoriteMusic";
@@ -15,7 +14,7 @@ export default function Home() {
 
             <div className="container py-5">
                 <div className="row flex-md-row align-items-center">
-                    <div className="col-md-4 pb-2 pb-md-0">
+                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-start">
                             About me.
                         </h1>
@@ -65,7 +64,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row flex-md-row-reverse align-items-center">
-                    <div className="col-md-4 pb-2 pb-md-0">
+                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-end">
                             Project spotlight.
                         </h1>
@@ -79,7 +78,7 @@ export default function Home() {
                 </div>
 
                 <div className="row flex-md-row align-items-center">
-                    <div className="col-md-4 pb-2 pb-md-0">
+                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-start">
                             What I'm listening to.
                         </h1>

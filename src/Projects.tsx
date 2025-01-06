@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ProjectArray from "./components/ProjectArray";
 import { type ProjectContent } from "./api/projects";
 import { fetchAllProjects } from "./api/projects";

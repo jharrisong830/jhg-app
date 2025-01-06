@@ -1,4 +1,3 @@
-import React from "react";
 import { type ProjectContent } from "../api/projects";
 import ProjectCard from "./ProjectCard";
 
@@ -10,7 +9,7 @@ export default function ProjectArray({
     let children: Array<React.JSX.Element> = [];
 
     for (let i = 0; i < projects.length; i++) {
-        children.push(<ProjectCard project={projects[i]} />);
+        children.push(<ProjectCard key={i} project={projects[i]} />);
     }
 
     return <>{children}</>;

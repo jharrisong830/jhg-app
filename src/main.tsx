@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -7,6 +6,7 @@ import Projects from "./Projects";
 import JSONTable from "./JSONTable";
 import Navbar from "./components/Navbar";
 import Connections from "./components/Connections";
+import Privacy from "./Privacy";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/index.css";
@@ -38,6 +38,15 @@ const router = createBrowserRouter([
                 <JSONTable />
             </>
         )
+    },
+    {
+        path: "/privacy",
+        element: (
+            <>
+                <Navbar />
+                <Privacy />
+            </>
+        )
     }
 ]);
 
@@ -46,8 +55,8 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <StrictMode>
+    <>
         <RouterProvider router={router} />
         <Connections />
-    </StrictMode>
+    </>
 );

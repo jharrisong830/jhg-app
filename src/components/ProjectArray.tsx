@@ -6,7 +6,7 @@ export default function ProjectArray({
 }: {
     projects: Array<ProjectContent>;
 }) {
-    let children: Array<React.JSX.Element> = [];
+    const children: Array<React.JSX.Element> = [];
 
     for (let i = 0; i < projects.length; i++) {
         children.push(<ProjectCard key={i} project={projects[i]} />);

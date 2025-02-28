@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { type ProjectContent } from "../api/projects";
 
 export default function ProjectCard({ project }: { project: ProjectContent }) {

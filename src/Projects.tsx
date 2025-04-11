@@ -12,7 +12,7 @@ export default function Projects() {
         const asyncWrapper = async () => {
             setProjectData(
                 await fetchAllProjects(
-                    "https://gist.githubusercontent.com/jharrisong830/e377cf7f875b7ecaf0fae7eb0fff66d4/raw/projects.json"
+                    "https://api.jhg.app/projects"
                 )
             );
         };

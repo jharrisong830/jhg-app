@@ -1,30 +1,7 @@
-import { useState, useEffect } from "react";
 import ProjectArray from "./components/ProjectArray";
-import { type ProjectContent } from "./api/projects";
-import { fetchAllProjects } from "./api/projects";
-import { Spinner } from "react-bootstrap";
+import projects from "./api/projects";
 
 export default function Projects() {
-    const [projectData, setProjectData] = useState<Array<ProjectContent>>([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const asyncWrapper = async () => {
-            setProjectData(
-                await fetchAllProjects(
-                    "https://api.jhg.app/projects"
-                )
-            );
-        };
-        asyncWrapper();
-        return;
-    }, []);
-
-    useEffect(() => {
-        // on change of projectData, switch loading based on array contents
-        setIsLoading(projectData.length === 0);
-    }, [projectData]);
-
     return (
         <main>
             <div className="px-4 py-5 text-center">
@@ -35,11 +12,7 @@ export default function Projects() {
             </div>
 
             <div className="container py-5">
-                {isLoading ? (
-                    <Spinner />
-                ) : (
-                    <ProjectArray projects={projectData} />
-                )}
+                <ProjectArray projects={projects} />
             </div>
         </main>
     );

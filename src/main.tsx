@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import Home from "./Home";
+import Error from "./Error";
 import Projects from "./Projects";
 import JSONTable from "./JSONTable";
 import Navbar from "./components/Navbar";
@@ -18,6 +19,12 @@ const router = createBrowserRouter([
             <>
                 <Navbar />
                 <Home />
+            </>
+        ),
+        ErrorBoundary: () => (
+            <>
+                <Navbar />
+                <Error />
             </>
         )
     },

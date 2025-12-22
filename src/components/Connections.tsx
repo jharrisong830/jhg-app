@@ -1,3 +1,7 @@
+import github from "../assets/link_icons/github-mark.svg";
+import atSymbol from "../assets/link_icons/at.svg";
+import linkedin from "../assets/link_icons/LI-In-Bug.png";
+
 export default function Connections() {
     return (
         <div className="container text-center pt-4 pb-5">
@@ -11,7 +15,7 @@ export default function Connections() {
                 >
                     <img
                         className="bi"
-                        src="/link_icons/github-mark.svg"
+                        src={github}
                         alt="GitHub logo"
                     />
                     GitHub
@@ -24,7 +28,7 @@ export default function Connections() {
                 >
                     <img
                         className="bi"
-                        src="/link_icons/at.svg"
+                        src={atSymbol}
                         alt="at symbol (@)"
                     />
                     Email
@@ -37,7 +41,7 @@ export default function Connections() {
                 >
                     <img
                         className="bi"
-                        src="/link_icons/LI-In-Bug.png"
+                        src={linkedin}
                         alt="LinkedIn logo"
                     />
                     LinkedIn

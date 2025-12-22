@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { generateTableHTML } from "./api/jsonTable";
+import { generateTableHTML } from "../util/jsonTable";
 
 export default function JSONTable() {
     const [jsonInp, setJsonInp] = useState("");

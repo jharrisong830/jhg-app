@@ -1,6 +1,7 @@
 import { Link } from "react-router";
-import ProjectSpotlight from "./components/ProjectSpotlight";
-import CurrentFavoriteMusic from "./components/CurrentFavoriteMusic";
+
+import ProjectSpotlight from "../components/projects/ProjectSpotlight";
+import CurrentFavoriteMusic from "../components/CurrentFavoriteMusic";
 
 export default function Home() {
     return (
@@ -43,15 +44,8 @@ export default function Home() {
                             most recently a Course Assistant for CS 496
                             (Principles of Programming Languages) at Stevens
                             Institute of Technology. You can find more details
-                            about my coursework and teaching experience on my{" "}
-                            <Link
-                                to="https://linkedin.com/in/johngraham830"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                LinkedIn page
-                            </Link>
-                            .
+                            about my coursework and teaching experience on my
+                            LinkedIn page.
                         </p>
 
                         <p>
@@ -63,6 +57,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+
                 <div className="row flex-md-row-reverse align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-end">

@@ -1,5 +1,5 @@
 import ProjectArray from "./ProjectArray";
-import projects from "../api/projects";
+import projects from "../../util/projects";
 
 export default function ProjectSpotlight() {
     const spotlightProjectData = projects.slice(0, 2);

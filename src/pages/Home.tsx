@@ -1,3 +1,6 @@
+import { Link } from "react-router";
+
+import ProjectSpotlight from "../components/projects/ProjectSpotlight";
 import CurrentFavoriteMusic from "../components/CurrentFavoriteMusic";
 
 export default function Home() {
@@ -56,6 +59,20 @@ export default function Home() {
                 </div>
 
                 <div className="row flex-md-row-reverse align-items-center">
+                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
+                        <h1 className="display-4 fw-bold text-end">
+                            Project spotlight.
+                        </h1>
+                    </div>
+                    <div className="col-md-8">
+                        <ProjectSpotlight />
+                        <Link to="/projects" className="btn btn-light">
+                            View More Projects
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="row flex-md-row align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-start">
                             What I'm listening to.

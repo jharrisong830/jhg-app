@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { type ProjectContent } from "../util/projects";
+import { type ProjectContent } from "../../util/projects";
 
 export default function ProjectCard({ project }: { project: ProjectContent }) {
     return (

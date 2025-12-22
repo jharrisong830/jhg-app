@@ -1,3 +1,4 @@
+import Connections from "./Connections";
 import Navbar from "./Navbar";
 
 export default function PageWithNavbar({ children }: { children: React.ReactNode }) {
@@ -5,6 +6,7 @@ export default function PageWithNavbar({ children }: { children: React.ReactNode
         <>
             <Navbar />
             {children}
+            <Connections />
         </>
     );
 }

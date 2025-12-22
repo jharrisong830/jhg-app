@@ -1,4 +1,4 @@
-import ProjectArray from "../components/ProjectArray";
+import ProjectArray from "../components/projects/ProjectArray";
 import projects from "../util/projects";
 
 export default function Projects() {

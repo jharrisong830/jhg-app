@@ -1,6 +1,6 @@
-import github from "../assets/link_icons/github-mark.svg";
-import atSymbol from "../assets/link_icons/at.svg";
-import linkedin from "../assets/link_icons/LI-In-Bug.png";
+import github from "../../assets/link_icons/github-mark.svg";
+import atSymbol from "../../assets/link_icons/at.svg";
+import linkedin from "../../assets/link_icons/LI-In-Bug.png";
 
 export default function Connections() {
     return (

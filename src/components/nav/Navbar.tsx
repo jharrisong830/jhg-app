@@ -1,4 +1,11 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
+
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
 import { Navbar as NB, Nav, Container } from "react-bootstrap";
 
 /**
@@ -15,14 +22,45 @@ const isActive = (currPath: string, target: string): boolean => {
     return currPath === target; // check for trailing
 };
 
+export function TestNavbar() {
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" component={Link} sx={{ flexGrow: 1 }} to="/">
+                        jhg.app
+                    </Typography>
+
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/projects"
+                    >
+                        Projects
+                    </Button>
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/json-table"
+                    >
+                        JSONTable
+                    </Button>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
+}
+
 export default function Navbar() {
+    const location = useLocation();
+
     return (
         <NB expand="md" sticky="top" className="customNav px-1">
             <Container className="m-0" fluid>
                 <NB.Brand
                     as={Link}
                     className="fw-bold"
-                    to={isActive(window.location.pathname, "/") ? "#" : "/"}
+                    to={isActive(location.pathname, "/") ? "#" : "/"}
                 >
                     jhg.app
                 </NB.Brand>
@@ -33,12 +71,12 @@ export default function Navbar() {
                             as={Link}
                             className={
                                 "px-2 mx-2" +
-                                (isActive(window.location.pathname, "/projects")
+                                (isActive(location.pathname, "/projects")
                                     ? " active"
                                     : "")
                             }
                             to={
-                                isActive(window.location.pathname, "/projects")
+                                isActive(location.pathname, "/projects")
                                     ? "#"
                                     : "/projects"
                             }
@@ -50,7 +88,7 @@ export default function Navbar() {
                             className={
                                 "px-2 mx-2" +
                                 (isActive(
-                                    window.location.pathname,
+                                    location.pathname,
                                     "/json-table"
                                 )
                                     ? " active"
@@ -58,7 +96,7 @@ export default function Navbar() {
                             }
                             to={
                                 isActive(
-                                    window.location.pathname,
+                                    location.pathname,
                                     "/json-table"
                                 )
                                     ? "#"

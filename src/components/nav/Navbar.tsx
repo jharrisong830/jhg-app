@@ -1,4 +1,11 @@
 import { Link, useLocation } from "react-router";
+
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
 import { Navbar as NB, Nav, Container } from "react-bootstrap";
 
 /**
@@ -14,6 +21,35 @@ const isActive = (currPath: string, target: string): boolean => {
         currPath = currPath.slice(0, currPath.length - 1);
     return currPath === target; // check for trailing
 };
+
+export function TestNavbar() {
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" component={Link} sx={{ flexGrow: 1 }} to="/">
+                        jhg.app
+                    </Typography>
+
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/projects"
+                    >
+                        Projects
+                    </Button>
+                    <Button
+                        color="inherit"
+                        component={Link}
+                        to="/json-table"
+                    >
+                        JSONTable
+                    </Button>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    );
+}
 
 export default function Navbar() {
     const location = useLocation();

@@ -5,7 +5,9 @@ export default function Error() {
         <main>
             <div className="px-4 py-5 text-center">
                 <h1 className="display-3 fw-normal">Error</h1>
-                <p className="lead">Something went wrong when trying to load this page.</p>
+                <p className="lead">
+                    Something went wrong when trying to load this page.
+                </p>
             </div>
 
             <div className="container py-5">
@@ -17,7 +19,8 @@ export default function Error() {
                     </div>
                     <div className="col-md-8">
                         <p>
-                            This page doesn't exist. If you think this is an issue, let me know!
+                            This page doesn't exist. If you think this is an
+                            issue, let me know!
                         </p>
 
                         <Link to="/" className="btn btn-light">

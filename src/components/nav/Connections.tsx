@@ -13,11 +13,7 @@ export default function Connections() {
                     rel="noreferrer"
                     className="btn btn-light btn-lg icon-link mx-2 my-2 my-md-0"
                 >
-                    <img
-                        className="bi"
-                        src={github}
-                        alt="GitHub logo"
-                    />
+                    <img className="bi" src={github} alt="GitHub logo" />
                     GitHub
                 </a>
                 <a
@@ -26,11 +22,7 @@ export default function Connections() {
                     rel="noreferrer"
                     className="btn btn-light btn-lg icon-link mx-2 my-2 my-md-0"
                 >
-                    <img
-                        className="bi"
-                        src={atSymbol}
-                        alt="at symbol (@)"
-                    />
+                    <img className="bi" src={atSymbol} alt="at symbol (@)" />
                     Email
                 </a>
                 <a
@@ -39,11 +31,7 @@ export default function Connections() {
                     rel="noreferrer"
                     className="btn btn-light btn-lg icon-link mx-2 my-2 my-md-0"
                 >
-                    <img
-                        className="bi"
-                        src={linkedin}
-                        alt="LinkedIn logo"
-                    />
+                    <img className="bi" src={linkedin} alt="LinkedIn logo" />
                     LinkedIn
                 </a>
             </div>

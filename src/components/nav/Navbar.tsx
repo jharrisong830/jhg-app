@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { Navbar as NB, Nav, Container } from "react-bootstrap";
 
 /**
@@ -16,13 +16,15 @@ const isActive = (currPath: string, target: string): boolean => {
 };
 
 export default function Navbar() {
+    const location = useLocation();
+
     return (
         <NB expand="md" sticky="top" className="customNav px-1">
             <Container className="m-0" fluid>
                 <NB.Brand
                     as={Link}
                     className="fw-bold"
-                    to={isActive(window.location.pathname, "/") ? "#" : "/"}
+                    to={isActive(location.pathname, "/") ? "#" : "/"}
                 >
                     jhg.app
                 </NB.Brand>
@@ -33,12 +35,12 @@ export default function Navbar() {
                             as={Link}
                             className={
                                 "px-2 mx-2" +
-                                (isActive(window.location.pathname, "/projects")
+                                (isActive(location.pathname, "/projects")
                                     ? " active"
                                     : "")
                             }
                             to={
-                                isActive(window.location.pathname, "/projects")
+                                isActive(location.pathname, "/projects")
                                     ? "#"
                                     : "/projects"
                             }
@@ -50,7 +52,7 @@ export default function Navbar() {
                             className={
                                 "px-2 mx-2" +
                                 (isActive(
-                                    window.location.pathname,
+                                    location.pathname,
                                     "/json-table"
                                 )
                                     ? " active"
@@ -58,7 +60,7 @@ export default function Navbar() {
                             }
                             to={
                                 isActive(
-                                    window.location.pathname,
+                                    location.pathname,
                                     "/json-table"
                                 )
                                     ? "#"

@@ -1,15 +1,12 @@
 import Connections from "./Connections";
 import Navbar from "./Navbar";
+import { Outlet } from "react-router";
 
-export default function PageWithNavbar({
-    children
-}: {
-    children: React.ReactNode;
-}) {
+export default function NavbarOutlet() {
     return (
         <>
             <Navbar />
-            {children}
+            <Outlet />
             <Connections />
         </>
     );

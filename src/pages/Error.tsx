@@ -1,6 +1,8 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 export default function Error() {
+    const location = useLocation();
+
     return (
         <main>
             <div className="px-4 py-5 text-center">
@@ -14,7 +16,7 @@ export default function Error() {
                 <div className="row flex-md-row align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
                         <h1 className="display-4 fw-bold text-start">
-                            Page not found.
+                            Page <code>{location.pathname}</code> not found.
                         </h1>
                     </div>
                     <div className="col-md-8">

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Link, useLocation } from "react-router";
 
 import AppBar from "@mui/material/AppBar";
@@ -5,109 +7,68 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
 
-import { Navbar as NB, Nav, Container } from "react-bootstrap";
+export default function Navbar() {
+    const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
 
-/**
- * returns true if the current path is the same as the target path (i.e. current path is active)
- *
- * @param {string} currPath
- * @param {string} target
- *
- * @returns {boolean}
- */
-const isActive = (currPath: string, target: string): boolean => {
-    if (currPath.endsWith("/") && currPath.length !== 1)
-        currPath = currPath.slice(0, currPath.length - 1);
-    return currPath === target; // check for trailing
-};
+    const handleOpenMenu = (event: React.MouseEvent<HTMLElement>) => {
+        setMenuAnchor(event.currentTarget);
+    };
 
-export function TestNavbar() {
+    const handleCloseMenu = () => setMenuAnchor(null);
+
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" elevation={0} sx={{ backgroundColor: "inherit" }}>
                 <Toolbar>
-                    <Typography variant="h6" component={Link} sx={{ flexGrow: 1 }} to="/">
+                    <Typography variant="h5" component={Link} sx={{ 
+                        fontWeight: 700,
+                        color: "inherit",
+                        textDecoration: "none" ,
+                        mr: 2
+                    }} to="/">
                         jhg.app
                     </Typography>
 
-                    <Button
-                        color="inherit"
-                        component={Link}
-                        to="/projects"
-                    >
-                        Projects
-                    </Button>
-                    <Button
-                        color="inherit"
-                        component={Link}
-                        to="/json-table"
-                    >
-                        JSONTable
-                    </Button>
+                    <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+                        <Button
+                            color="inherit"
+                            component={Link}
+                            to="/projects"
+                        >
+                            Projects
+                        </Button>
+                        <Button
+                            color="inherit"
+                            component={Link}
+                            to="/json-table"
+                        >
+                            JSONTable
+                        </Button>
+                    </Box>
+
+                    <Box justifyContent="flex-end" alignItems="flex-end" sx={{ flexGrow: 1, display: { xs: "flex", sm: "none" } }}>
+                        <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu anchorEl={menuAnchor} open={menuAnchor !== null} onClose={handleCloseMenu}>
+                            <MenuItem component={Link} to="/" onClick={handleCloseMenu}>
+                                Home
+                            </MenuItem>
+                            <MenuItem component={Link} to="/projects" onClick={handleCloseMenu}>
+                                Projects
+                            </MenuItem>
+                            <MenuItem component={Link} to="/json-table" onClick={handleCloseMenu}>
+                                JSONTable
+                            </MenuItem>
+                        </Menu>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>
-    );
-}
-
-export default function Navbar() {
-    const location = useLocation();
-
-    return (
-        <NB expand="md" sticky="top" className="customNav px-1">
-            <Container className="m-0" fluid>
-                <NB.Brand
-                    as={Link}
-                    className="fw-bold"
-                    to={isActive(location.pathname, "/") ? "#" : "/"}
-                >
-                    jhg.app
-                </NB.Brand>
-                <NB.Toggle aria-controls="basic-navbar-nav" />
-                <NB.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link
-                            as={Link}
-                            className={
-                                "px-2 mx-2" +
-                                (isActive(location.pathname, "/projects")
-                                    ? " active"
-                                    : "")
-                            }
-                            to={
-                                isActive(location.pathname, "/projects")
-                                    ? "#"
-                                    : "/projects"
-                            }
-                        >
-                            Projects
-                        </Nav.Link>
-                        <Nav.Link
-                            as={Link}
-                            className={
-                                "px-2 mx-2" +
-                                (isActive(
-                                    location.pathname,
-                                    "/json-table"
-                                )
-                                    ? " active"
-                                    : "")
-                            }
-                            to={
-                                isActive(
-                                    location.pathname,
-                                    "/json-table"
-                                )
-                                    ? "#"
-                                    : "/json-table"
-                            }
-                        >
-                            JSONTable
-                        </Nav.Link>
-                    </Nav>
-                </NB.Collapse>
-            </Container>
-        </NB>
     );
 }

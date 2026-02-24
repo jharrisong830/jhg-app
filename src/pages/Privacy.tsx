@@ -1,10 +1,12 @@
+import PageHeader from "../components/PageHeader";
+
 export default function Privacy() {
     return (
         <main>
-            <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-normal">Privacy</h1>
-                <p className="lead">TLDR: I don't collect your data ever.</p>
-            </div>
+            <PageHeader
+                title="Privacy."
+                subtitle="TLDR: I don't collect your data ever."
+            />
 
             <div className="container py-5">
                 <div className="row flex-md-row align-items-center">

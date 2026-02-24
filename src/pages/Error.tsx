@@ -1,17 +1,17 @@
 import { Link, useLocation } from "react-router";
 
+import PageHeader from "../components/PageHeader";
+
 export default function Error() {
     const location = useLocation();
 
     return (
         <main>
-            <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-normal">Error</h1>
-                <p className="lead">
-                    Something went wrong when trying to load this page.
-                </p>
-            </div>
-
+            <PageHeader
+                title="Error."
+                subtitle="Something went wrong when trying to load this page."
+            />
+            
             <div className="container py-5">
                 <div className="row flex-md-row align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { generateTableHTML } from "../util/jsonTable";
 
+import PageHeader from "../components/PageHeader";
+
 export default function JSONTable() {
     const [jsonInp, setJsonInp] = useState("");
     const [status, setStatus] = useState("waiting"); // waiting -> not submitted, submitted -> submitted
@@ -29,12 +31,10 @@ export default function JSONTable() {
 
     return (
         <main>
-            <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-normal">JSON Table Renderer</h1>
-                <p className="lead">
-                    Insert JSON-formatted text to render it in a tabular format.
-                </p>
-            </div>
+            <PageHeader
+                title="JSON Table Renderer."
+                subtitle="Insert JSON-formatted text to render it in a tabular format."
+            />
 
             <div className="container py-5">
                 <form id="jsonInpForm" onSubmit={formSubmitEvent}>

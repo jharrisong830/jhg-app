@@ -1,6 +1,9 @@
 import { Link, useLocation } from "react-router";
 
+import Button from "@mui/material/Button";
+
 import PageHeader from "../components/pages/PageHeader";
+import PageContentSection from "../components/pages/PageContentSection";
 
 export default function Error() {
     const location = useLocation();
@@ -12,25 +15,15 @@ export default function Error() {
                 subtitle="Something went wrong when trying to load this page."
             />
 
-            <div className="container py-5">
-                <div className="row flex-md-row align-items-center">
-                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
-                        <h1 className="display-4 fw-bold text-start">
-                            Page <code>{location.pathname}</code> not found.
-                        </h1>
-                    </div>
-                    <div className="col-md-8">
-                        <p>
-                            This page doesn't exist. If you think this is an
-                            issue, let me know!
-                        </p>
-
-                        <Link to="/" className="btn btn-light">
-                            Back to Home
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <PageContentSection title="Page not found.">
+                <p>
+                    The page <code>{location.pathname}</code> doesn't exist. If
+                    you think this is an issue, let me know!
+                </p>
+                <Button variant="contained" component={Link} to="/">
+                    Back to Home
+                </Button>
+            </PageContentSection>
         </main>
     );
 }

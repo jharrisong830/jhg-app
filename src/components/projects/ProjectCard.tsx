@@ -1,7 +1,32 @@
 import { Link } from "react-router";
+
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 import { type ProjectContent } from "../../util/projects";
 
 export default function ProjectCard({ project }: { project: ProjectContent }) {
+    return (
+        <Card variant="outlined">
+            <CardContent>
+                <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
+                    {project.subtitle}
+                </Typography>
+                <Typography variant="h5" component="div">
+                    {project.title}
+                </Typography>
+                <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>{project.link}</Typography>
+                <Typography variant="body2">
+                    {project.description}
+                </Typography>
+            </CardContent>
+        </Card>
+    );
+
+
+
     return (
         <div className="card my-3">
             <div className="card-body">

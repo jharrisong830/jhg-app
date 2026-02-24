@@ -13,16 +13,16 @@ const theme = createTheme({
     },
     typography: {
         fontFamily: [
-            "-apple-system", 
-            "BlinkMacSystemFont", 
-            "Segoe UI", 
-            "Roboto", 
+            "-apple-system",
+            "BlinkMacSystemFont",
+            "Segoe UI",
+            "Roboto",
             "Oxygen",
-            "Ubuntu", 
-            "Cantarell", 
-            "Fira Sans", 
-            "Droid Sans", 
-            "Helvetica Neue", 
+            "Ubuntu",
+            "Cantarell",
+            "Fira Sans",
+            "Droid Sans",
+            "Helvetica Neue",
             "sans-serif"
         ].join(",")
     },
@@ -36,10 +36,10 @@ const theme = createTheme({
     }
 });
 
-export default function CustomThemeProvider({ children }: { children: React.ReactNode }) {
-    return (
-        <ThemeProvider theme={theme}>
-            {children}
-        </ThemeProvider>
-    );
+export default function CustomThemeProvider({
+    children
+}: {
+    children: React.ReactNode;
+}) {
+    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

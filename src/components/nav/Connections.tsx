@@ -9,19 +9,41 @@ import WorkIcon from "@mui/icons-material/Work";
 export default function Connections() {
     return (
         <Grid container pb={2}>
-            <Grid display="flex" justifyContent="center" alignItems="center" size={12} spacing={2} mb={2}>
-                <Typography variant="h6" component="h6" sx={{ fontWeight: 600 }}>
+            <Grid
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                size={12}
+                mb={2}
+            >
+                <Typography
+                    variant="h6"
+                    component="h6"
+                    sx={{ fontWeight: 600 }}
+                >
                     Connect with me!
                 </Typography>
             </Grid>
 
-            <Grid container display="flex" justifyContent="center" alignItems="center" size={12} spacing={2}>
-                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
-                    <Button 
-                        href="https://github.com/jharrisong830" 
+            <Grid
+                container
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                size={12}
+                spacing={2}
+            >
+                <Grid
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    size="auto"
+                >
+                    <Button
+                        href="https://github.com/jharrisong830"
                         target="_blank"
                         rel="noreferrer"
-                        variant="contained" 
+                        variant="contained"
                         size="large"
                         startIcon={<MergeIcon />}
                     >
@@ -29,12 +51,17 @@ export default function Connections() {
                     </Button>
                 </Grid>
 
-                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
-                    <Button 
-                        href="mailto:john@jhg.app" 
+                <Grid
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    size="auto"
+                >
+                    <Button
+                        href="mailto:john@jhg.app"
                         target="_blank"
                         rel="noreferrer"
-                        variant="contained" 
+                        variant="contained"
                         size="large"
                         startIcon={<EmailIcon />}
                     >
@@ -42,12 +69,17 @@ export default function Connections() {
                     </Button>
                 </Grid>
 
-                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
-                    <Button 
-                        href="https://linkedin.com/in/johngraham830" 
+                <Grid
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    size="auto"
+                >
+                    <Button
+                        href="https://linkedin.com/in/johngraham830"
                         target="_blank"
                         rel="noreferrer"
-                        variant="contained" 
+                        variant="contained"
                         size="large"
                         startIcon={<WorkIcon />}
                     >
@@ -56,5 +88,5 @@ export default function Connections() {
                 </Grid>
             </Grid>
         </Grid>
-    )
+    );
 }

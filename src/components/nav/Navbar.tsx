@@ -25,21 +25,22 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" elevation={0}>
                 <Toolbar>
-                    <Typography variant="h5" component={Link} sx={{ 
-                        color: "inherit",
-                        fontWeight: 700,
-                        textDecoration: "none",
-                        mr: 2
-                    }} to="/">
+                    <Typography
+                        variant="h5"
+                        component={Link}
+                        sx={{
+                            color: "inherit",
+                            fontWeight: 700,
+                            textDecoration: "none",
+                            mr: 2
+                        }}
+                        to="/"
+                    >
                         jhg.app
                     </Typography>
 
                     <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-                        <Button
-                            color="inherit"
-                            component={Link}
-                            to="/projects"
-                        >
+                        <Button color="inherit" component={Link} to="/projects">
                             Projects
                         </Button>
                         <Button
@@ -51,18 +52,45 @@ export default function Navbar() {
                         </Button>
                     </Box>
 
-                    <Box justifyContent="flex-end" alignItems="flex-end" sx={{ flexGrow: 1, display: { xs: "flex", sm: "none" } }}>
-                        <IconButton size="large" color="inherit" onClick={handleOpenMenu}>
+                    <Box
+                        justifyContent="flex-end"
+                        alignItems="flex-end"
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: "flex", sm: "none" }
+                        }}
+                    >
+                        <IconButton
+                            size="large"
+                            color="inherit"
+                            onClick={handleOpenMenu}
+                        >
                             <MenuIcon />
                         </IconButton>
-                        <Menu anchorEl={menuAnchor} open={menuAnchor !== null} onClose={handleCloseMenu}>
-                            <MenuItem component={Link} to="/" onClick={handleCloseMenu}>
+                        <Menu
+                            anchorEl={menuAnchor}
+                            open={menuAnchor !== null}
+                            onClose={handleCloseMenu}
+                        >
+                            <MenuItem
+                                component={Link}
+                                to="/"
+                                onClick={handleCloseMenu}
+                            >
                                 Home
                             </MenuItem>
-                            <MenuItem component={Link} to="/projects" onClick={handleCloseMenu}>
+                            <MenuItem
+                                component={Link}
+                                to="/projects"
+                                onClick={handleCloseMenu}
+                            >
                                 Projects
                             </MenuItem>
-                            <MenuItem component={Link} to="/json-table" onClick={handleCloseMenu}>
+                            <MenuItem
+                                component={Link}
+                                to="/json-table"
+                                onClick={handleCloseMenu}
+                            >
                                 JSONTable
                             </MenuItem>
                         </Menu>

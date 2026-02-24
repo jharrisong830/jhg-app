@@ -7,7 +7,12 @@ import Box from "@mui/material/Box";
 export default function NavbarOutlet() {
     return (
         <CustomThemeProvider>
-            <Box sx={{ color: "primary.contrastText", backgroundColor: "primary.main" }}>
+            <Box
+                sx={{
+                    color: "primary.contrastText",
+                    backgroundColor: "primary.main"
+                }}
+            >
                 <Navbar />
                 <Outlet />
                 <Connections />

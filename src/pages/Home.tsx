@@ -2,16 +2,16 @@ import { Link } from "react-router";
 
 import ProjectSpotlight from "../components/projects/ProjectSpotlight";
 import CurrentFavoriteMusic from "../components/CurrentFavoriteMusic";
+import PageHeader from "../components/PageHeader";
 
 export default function Home() {
     return (
         <main>
-            <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-bold text-body-emphasis">
-                    Hi! I'm John.
-                </h1>
-                <p className="lead">Welcome to my home on the web.</p>
-            </div>
+            <PageHeader
+                title="Hi! I'm John."
+                subtitle="Welcome to my home on the web."
+                shouldEmphasizeTitle
+            />
 
             <div className="container py-5">
                 <div className="row flex-md-row align-items-center">

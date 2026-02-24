@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -22,24 +22,36 @@ export default function Navbar() {
     const handleCloseMenu = () => setMenuAnchor(null);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Grid container>
             <AppBar position="static" elevation={0}>
                 <Toolbar>
-                    <Typography
-                        variant="h5"
-                        component={Link}
-                        sx={{
-                            color: "inherit",
-                            fontWeight: 700,
-                            textDecoration: "none",
-                            mr: 2
-                        }}
-                        to="/"
+                    <Grid
+                        display="flex"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        size="auto"
+                        mr={2}
                     >
-                        jhg.app
-                    </Typography>
+                        <Typography
+                            variant="h5"
+                            component={Link}
+                            sx={{
+                                color: "inherit",
+                                fontWeight: 700,
+                                textDecoration: "none"
+                            }}
+                            to="/"
+                        >
+                            jhg.app
+                        </Typography>
+                    </Grid>
 
-                    <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+                    <Grid
+                        display={{ xs: "none", sm: "flex" }}
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        size="grow"
+                    >
                         <Button color="inherit" component={Link} to="/projects">
                             Projects
                         </Button>
@@ -50,15 +62,13 @@ export default function Navbar() {
                         >
                             JSONTable
                         </Button>
-                    </Box>
+                    </Grid>
 
-                    <Box
+                    <Grid
+                        display={{ xs: "flex", sm: "none" }}
                         justifyContent="flex-end"
-                        alignItems="flex-end"
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", sm: "none" }
-                        }}
+                        alignItems="center"
+                        size="grow"
                     >
                         <IconButton
                             size="large"
@@ -94,9 +104,9 @@ export default function Navbar() {
                                 JSONTable
                             </MenuItem>
                         </Menu>
-                    </Box>
+                    </Grid>
                 </Toolbar>
             </AppBar>
-        </Box>
+        </Grid>
     );
 }

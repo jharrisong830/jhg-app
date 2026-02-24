@@ -11,7 +11,7 @@ export default function PageHeader({
     shouldEmphasizeTitle?: boolean;
 }) {
     return (
-        <Grid container>
+        <Grid container p={4}>
             <Grid
                 display="flex"
                 justifyContent="center"

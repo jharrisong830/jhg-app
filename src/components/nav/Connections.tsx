@@ -8,7 +8,7 @@ import WorkIcon from "@mui/icons-material/Work";
 
 export default function Connections() {
     return (
-        <Grid container pb={2}>
+        <Grid container p={4}>
             <Grid
                 display="flex"
                 justifyContent="center"

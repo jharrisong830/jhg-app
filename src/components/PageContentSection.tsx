@@ -16,7 +16,7 @@ export default function PageContentSection({
     rowReverse?: boolean;
 }) {
     return (
-        <Grid container direction={getRowDirection(rowReverse)}>
+        <Grid container direction={getRowDirection(rowReverse)} p={4}>
             <Grid
                 display="flex"
                 textAlign={getTextAlign(rowReverse)}

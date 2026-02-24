@@ -11,7 +11,7 @@ export default function Error() {
                 title="Error."
                 subtitle="Something went wrong when trying to load this page."
             />
-            
+
             <div className="container py-5">
                 <div className="row flex-md-row align-items-center">
                     <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">

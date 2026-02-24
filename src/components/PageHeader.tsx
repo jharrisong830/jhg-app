@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 export default function PageHeader({
     title,
     subtitle,
-    shouldEmphasizeTitle
+    shouldEmphasizeTitle = false
 }: {
     title: string;
     subtitle: string;

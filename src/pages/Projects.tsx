@@ -9,7 +9,7 @@ export default function Projects() {
                 title="Projects."
                 subtitle="Some of my personal and academic projects."
             />
-            
+
             <div className="container py-5">
                 <ProjectArray projects={projects} />
             </div>

@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 
 import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
 import PageHeader from "../components/pages/PageHeader";
 import PageContentSection from "../components/pages/PageContentSection";
@@ -16,10 +17,10 @@ export default function Error() {
             />
 
             <PageContentSection title="Page not found.">
-                <p>
+                <Typography variant="body1" component="p">
                     The page <code>{location.pathname}</code> doesn't exist. If
                     you think this is an issue, let me know!
-                </p>
+                </Typography>
                 <Button variant="contained" component={Link} to="/">
                     Back to Home
                 </Button>

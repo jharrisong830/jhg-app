@@ -2,21 +2,24 @@ import Connections from "./Connections";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router";
 import CustomThemeProvider from "../CustomThemeProvider";
-import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 export default function NavbarOutlet() {
     return (
         <CustomThemeProvider>
-            <Box
+            <Container
+                disableGutters
+                maxWidth={false}
                 sx={{
                     color: "primary.contrastText",
-                    backgroundColor: "primary.main"
+                    backgroundColor: "primary.main",
+                    minHeight: "100vh"
                 }}
             >
                 <Navbar />
                 <Outlet />
                 <Connections />
-            </Box>
+            </Container>
         </CustomThemeProvider>
     );
 }

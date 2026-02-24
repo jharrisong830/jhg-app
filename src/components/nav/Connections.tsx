@@ -24,7 +24,6 @@ export function TestConnections() {
                     rel="noreferrer"
                     variant="contained" 
                     startIcon={<MergeIcon />}
-                    color="primary"
                 >
                     GitHub
                 </Button>

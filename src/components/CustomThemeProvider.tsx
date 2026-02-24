@@ -5,6 +5,10 @@ const theme = createTheme({
         primary: {
             main: "#253863",
             contrastText: "#F2E2D2"
+        },
+        secondary: {
+            main: "#35AC88",
+            contrastText: "#F2E2D2"
         }
     },
     typography: {
@@ -21,6 +25,14 @@ const theme = createTheme({
             "Helvetica Neue", 
             "sans-serif"
         ].join(",")
+    },
+    components: {
+        MuiButton: {
+            defaultProps: {
+                disableElevation: true,
+                color: "secondary"
+            }
+        }
     }
 });
 

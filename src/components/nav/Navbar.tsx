@@ -28,7 +28,7 @@ export default function Navbar() {
                     <Typography variant="h5" component={Link} sx={{ 
                         color: "inherit",
                         fontWeight: 700,
-                        textDecoration: "none" ,
+                        textDecoration: "none",
                         mr: 2
                     }} to="/">
                         jhg.app

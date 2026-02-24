@@ -1,4 +1,4 @@
-import Connections, { TestConnections } from "./Connections";
+import Connections from "./Connections";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router";
 import CustomThemeProvider from "../CustomThemeProvider";
@@ -10,7 +10,7 @@ export default function NavbarOutlet() {
             <Box sx={{ color: "primary.contrastText", backgroundColor: "primary.main" }}>
                 <Navbar />
                 <Outlet />
-                <TestConnections />
+                <Connections />
             </Box>
         </CustomThemeProvider>
     );

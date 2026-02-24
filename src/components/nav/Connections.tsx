@@ -2,9 +2,9 @@ import github from "../../assets/link_icons/github-mark.svg";
 import atSymbol from "../../assets/link_icons/at.svg";
 import linkedin from "../../assets/link_icons/LI-In-Bug.png";
 
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 import MergeIcon from "@mui/icons-material/Merge";
 import EmailIcon from "@mui/icons-material/Email";
@@ -12,43 +12,51 @@ import WorkIcon from "@mui/icons-material/Work";
 
 export function TestConnections() {
     return (
-        <Box>
-            <Typography variant="h6" component="p">
-                Connect with me!
-            </Typography>
+        <Grid container>
+            <Grid display="flex" justifyContent="center" alignItems="center" size={12}>
+                <Typography variant="h6" component="p">
+                    Connect with me!
+                </Typography>
+            </Grid>
 
-            <Box>
-                <Button 
-                    href="https://github.com/jharrisong830" 
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="contained" 
-                    startIcon={<MergeIcon />}
-                >
-                    GitHub
-                </Button>
+            <Grid container display="flex" justifyContent="center" alignItems="center" size={12} spacing={2}>
+                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
+                    <Button 
+                        href="https://github.com/jharrisong830" 
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="contained" 
+                        startIcon={<MergeIcon />}
+                    >
+                        GitHub
+                    </Button>
+                </Grid>
 
-                <Button 
-                    href="mailto:john@jhg.app" 
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="contained" 
-                    startIcon={<EmailIcon />}
-                >
-                    Email
-                </Button>
+                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
+                    <Button 
+                        href="mailto:john@jhg.app" 
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="contained" 
+                        startIcon={<EmailIcon />}
+                    >
+                        Email
+                    </Button>
+                </Grid>
 
-                <Button 
-                    href="https://linkedin.com/in/johngraham830" 
-                    target="_blank"
-                    rel="noreferrer"
-                    variant="contained" 
-                    startIcon={<WorkIcon />}
-                >
-                    LinkedIn
-                </Button>
-            </Box>
-        </Box>
+                <Grid display="flex" justifyContent="center" alignItems="center" size="auto">
+                    <Button 
+                        href="https://linkedin.com/in/johngraham830" 
+                        target="_blank"
+                        rel="noreferrer"
+                        variant="contained" 
+                        startIcon={<WorkIcon />}
+                    >
+                        LinkedIn
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
     )
 }
 

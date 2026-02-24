@@ -1,7 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 
-import "./index.css";
-
 import NavbarOutlet from "./components/nav/NavbarOutlet";
 import Home from "./pages/Home";
 import Error from "./pages/Error";

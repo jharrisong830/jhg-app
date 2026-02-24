@@ -23,11 +23,11 @@ export default function Navbar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" elevation={0} sx={{ backgroundColor: "inherit" }}>
+            <AppBar position="static" elevation={0}>
                 <Toolbar>
                     <Typography variant="h5" component={Link} sx={{ 
-                        fontWeight: 700,
                         color: "inherit",
+                        fontWeight: 700,
                         textDecoration: "none" ,
                         mr: 2
                     }} to="/">

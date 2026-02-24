@@ -2,6 +2,57 @@ import github from "../../assets/link_icons/github-mark.svg";
 import atSymbol from "../../assets/link_icons/at.svg";
 import linkedin from "../../assets/link_icons/LI-In-Bug.png";
 
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+import MergeIcon from "@mui/icons-material/Merge";
+import EmailIcon from "@mui/icons-material/Email";
+import WorkIcon from "@mui/icons-material/Work";
+
+export function TestConnections() {
+    return (
+        <Box>
+            <Typography variant="h6" component="p">
+                Connect with me!
+            </Typography>
+
+            <Box>
+                <Button 
+                    href="https://github.com/jharrisong830" 
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="contained" 
+                    startIcon={<MergeIcon />}
+                    color="primary"
+                >
+                    GitHub
+                </Button>
+
+                <Button 
+                    href="mailto:john@jhg.app" 
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="contained" 
+                    startIcon={<EmailIcon />}
+                >
+                    Email
+                </Button>
+
+                <Button 
+                    href="https://linkedin.com/in/johngraham830" 
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="contained" 
+                    startIcon={<WorkIcon />}
+                >
+                    LinkedIn
+                </Button>
+            </Box>
+        </Box>
+    )
+}
+
 export default function Connections() {
     return (
         <div className="container text-center pt-4 pb-5">

@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 import NavbarOutlet from "./components/nav/NavbarOutlet";
 import Home from "./pages/Home";

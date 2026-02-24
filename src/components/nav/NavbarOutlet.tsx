@@ -1,4 +1,4 @@
-import Connections from "./Connections";
+import Connections, { TestConnections } from "./Connections";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router";
 
@@ -7,7 +7,7 @@ export default function NavbarOutlet() {
         <>
             <Navbar />
             <Outlet />
-            <Connections />
+            <TestConnections />
         </>
     );
 }

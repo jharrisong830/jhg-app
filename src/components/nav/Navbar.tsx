@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";

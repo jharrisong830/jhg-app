@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { generateTableHTML } from "../util/jsonTable";
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../components/pages/PageHeader";
 
 export default function JSONTable() {
     const [jsonInp, setJsonInp] = useState("");

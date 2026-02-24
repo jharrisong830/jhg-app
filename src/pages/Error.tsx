@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router";
 
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../components/pages/PageHeader";
 
 export default function Error() {
     const location = useLocation();

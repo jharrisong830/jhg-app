@@ -3,8 +3,8 @@ import Button from "@mui/material/Button";
 
 import ProjectSpotlight from "../components/projects/ProjectSpotlight";
 import CurrentFavoriteMusic from "../components/CurrentFavoriteMusic";
-import PageHeader from "../components/PageHeader";
-import PageContentSection from "../components/PageContentSection";
+import PageHeader from "../components/pages/PageHeader";
+import PageContentSection from "../components/pages/PageContentSection";
 
 export default function Home() {
     return (

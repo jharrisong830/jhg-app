@@ -1,7 +1,7 @@
 import Connections from "./Connections";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router";
-import CustomThemeProvider from "../CustomThemeProvider";
+import CustomThemeProvider from "../misc/CustomThemeProvider";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 

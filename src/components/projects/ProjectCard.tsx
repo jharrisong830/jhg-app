@@ -9,7 +9,7 @@ import { type ProjectContent } from "../../util/projects";
 
 export default function ProjectCard({ project }: { project: ProjectContent }) {
     return (
-        <Card variant="outlined">
+        <Card variant="outlined" sx={{ color: "primary.contrastText", backgroundColor: "#484261" }}>
             <CardContent>
                 <Typography
                     gutterBottom

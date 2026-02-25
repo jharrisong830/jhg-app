@@ -6,12 +6,22 @@ const theme = createTheme({
             default: "#253863"
         },
         primary: {
-            main: "#253863",
-            contrastText: "#F2E2D2"
+            main: "#253863"
         },
         secondary: {
-            main: "#35AC88",
-            contrastText: "#F2E2D2"
+            main: "#63CFAF"
+        },
+        success: {
+            main: "#04724D"
+        },
+        error: {
+            main: "#D35269"
+        },
+        info: {
+            main: "#3C91E6"
+        },
+        warning: {
+            main: "#FFB30F"
         }
     },
     typography: {

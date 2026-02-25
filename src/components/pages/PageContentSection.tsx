@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
+import Typography, { type TypographyProps } from "@mui/material/Typography";
 
 const getRowDirection = (rowReverse: boolean) =>
     rowReverse ? "row-reverse" : "row";
@@ -9,11 +9,13 @@ const getTextAlign = (rowReverse: boolean) => (rowReverse ? "end" : "start");
 export default function PageContentSection({
     title,
     children,
-    rowReverse = false
+    rowReverse = false,
+    titleProps
 }: {
     title: string;
     children: React.ReactNode;
     rowReverse?: boolean;
+    titleProps?: TypographyProps;
 }) {
     return (
         <Grid container direction={getRowDirection(rowReverse)} p={4}>
@@ -24,7 +26,7 @@ export default function PageContentSection({
                 alignItems="center"
                 size={{ xs: 12, md: 4 }}
             >
-                <Typography variant="h4" sx={{ fontWeight: 700 }}>
+                <Typography variant="h4" {...titleProps} sx={{ fontWeight: 700, ...titleProps?.sx }}>
                     {title}
                 </Typography>
             </Grid>

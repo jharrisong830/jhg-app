@@ -13,10 +13,11 @@ export default function Error() {
         <main>
             <PageHeader
                 title="Error."
+                titleProps={{ color: "error" }}
                 subtitle="Something went wrong when trying to load this page."
             />
 
-            <PageContentSection title="Page not found.">
+            <PageContentSection title="Page not found." titleProps={{ color: "error" }}>
                 <Typography variant="body1" component="p">
                     The page <code>{location.pathname}</code> doesn't exist. If
                     you think this is an issue, let me know!

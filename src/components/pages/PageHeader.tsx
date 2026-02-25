@@ -1,14 +1,18 @@
-import Typography from "@mui/material/Typography";
+import Typography, { type TypographyProps } from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
 export default function PageHeader({
     title,
     subtitle,
-    shouldEmphasizeTitle = false
+    shouldEmphasizeTitle = false,
+    titleProps,
+    subtitleProps
 }: {
     title: string;
     subtitle: string;
     shouldEmphasizeTitle?: boolean;
+    titleProps?: TypographyProps;
+    subtitleProps?: TypographyProps;
 }) {
     return (
         <Grid container p={4}>
@@ -22,7 +26,8 @@ export default function PageHeader({
                 <Typography
                     variant="h2"
                     component="h1"
-                    sx={{ fontWeight: shouldEmphasizeTitle ? 700 : 600 }}
+                    {...titleProps}
+                    sx={{ fontWeight: shouldEmphasizeTitle ? 700 : 500, ...titleProps?.sx }}
                 >
                     {title}
                 </Typography>
@@ -33,7 +38,12 @@ export default function PageHeader({
                 alignItems="center"
                 size={12}
             >
-                <Typography variant="h6" component="p" sx={{ fontWeight: 500 }}>
+                <Typography 
+                    variant="h6" 
+                    component="p" 
+                    {...subtitleProps}
+                    sx={{ fontWeight: 500, ...subtitleProps?.sx }}
+                >
                     {subtitle}
                 </Typography>
             </Grid>

@@ -50,7 +50,12 @@ export default function Home() {
 
             <PageContentSection title="Project Spotlight." rowReverse>
                 <ProjectSpotlight />
-                <Button variant="contained" component={Link} to="/projects" sx={{ alignSelf: "flex-start", width: "auto" }}>
+                <Button
+                    variant="contained"
+                    component={Link}
+                    to="/projects"
+                    sx={{ alignSelf: "flex-start", width: "auto" }}
+                >
                     View Projects
                 </Button>
             </PageContentSection>

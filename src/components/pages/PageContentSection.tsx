@@ -36,9 +36,7 @@ export default function PageContentSection({
                 </Typography>
             </Grid>
             <Grid alignItems="center" size={{ xs: 12, md: 8 }}>
-                <Stack spacing={2}>
-                    {children}
-                </Stack>
+                <Stack spacing={2}>{children}</Stack>
             </Grid>
         </Grid>
     );

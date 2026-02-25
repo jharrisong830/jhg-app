@@ -55,13 +55,6 @@ export default function Navbar() {
                         <Button color="inherit" component={Link} to="/projects">
                             Projects
                         </Button>
-                        <Button
-                            color="inherit"
-                            component={Link}
-                            to="/json-table"
-                        >
-                            JSONTable
-                        </Button>
                     </Grid>
 
                     <Grid
@@ -95,13 +88,6 @@ export default function Navbar() {
                                 onClick={handleCloseMenu}
                             >
                                 Projects
-                            </MenuItem>
-                            <MenuItem
-                                component={Link}
-                                to="/json-table"
-                                onClick={handleCloseMenu}
-                            >
-                                JSONTable
                             </MenuItem>
                         </Menu>
                     </Grid>

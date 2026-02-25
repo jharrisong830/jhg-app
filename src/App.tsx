@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import Privacy from "./pages/Privacy";
 import Projects from "./pages/Projects";
-import JSONTable from "./pages/JSONTable";
 
 const router = createBrowserRouter([
     {
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
             {
                 path: "/projects",
                 element: <Projects />
-            },
-            {
-                path: "/json-table",
-                element: <JSONTable />
             },
             {
                 path: "/privacy",

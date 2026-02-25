@@ -34,10 +34,7 @@ export default function PageContentSection({
                     {title}
                 </Typography>
             </Grid>
-            <Grid
-                alignItems="center"
-                size={{ xs: 12, md: 8 }}
-            >
+            <Grid alignItems="center" size={{ xs: 12, md: 8 }}>
                 {children}
             </Grid>
         </Grid>

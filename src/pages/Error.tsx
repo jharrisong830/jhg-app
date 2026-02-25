@@ -25,7 +25,7 @@ export default function Error() {
                     The page <code>{location.pathname}</code> doesn't exist. If
                     you think this is an issue, let me know!
                 </Typography>
-                <Button variant="contained" component={Link} to="/">
+                <Button variant="contained" component={Link} to="/" sx={{ alignSelf: "flex-start", width: "auto" }}>
                     Back to Home
                 </Button>
             </PageContentSection>

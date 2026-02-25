@@ -1,4 +1,5 @@
 import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 
 const getRowDirection = (rowReverse: boolean) =>
@@ -35,7 +36,9 @@ export default function PageContentSection({
                 </Typography>
             </Grid>
             <Grid alignItems="center" size={{ xs: 12, md: 8 }}>
-                {children}
+                <Stack spacing={2}>
+                    {children}
+                </Stack>
             </Grid>
         </Grid>
     );

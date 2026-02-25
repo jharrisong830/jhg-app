@@ -1,4 +1,4 @@
-import ProjectArray from "../components/projects/ProjectArray";
+import ProjectCard from "../components/projects/ProjectCard";
 import projects from "../util/projects";
 import PageHeader from "../components/pages/PageHeader";
 
@@ -11,7 +11,7 @@ export default function Projects() {
             />
 
             <div className="container py-5">
-                <ProjectArray projects={projects} />
+                {projects.map((project, index) => <ProjectCard key={index} project={project} />)}
             </div>
         </main>
     );

@@ -35,7 +35,6 @@ export default function PageContentSection({
                 </Typography>
             </Grid>
             <Grid
-                textAlign={getTextAlign(rowReverse)}
                 alignItems="center"
                 size={{ xs: 12, md: 8 }}
             >

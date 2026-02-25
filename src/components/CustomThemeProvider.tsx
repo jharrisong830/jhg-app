@@ -2,6 +2,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
     palette: {
+        text: {
+            secondary: "#DEE2E6"
+        },
         background: {
             default: "#253863"
         },

@@ -11,7 +11,9 @@ export default function Projects() {
             />
 
             <div className="container py-5">
-                {projects.map((project, index) => <ProjectCard key={index} project={project} />)}
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} project={project} />
+                ))}
             </div>
         </main>
     );

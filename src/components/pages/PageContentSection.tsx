@@ -26,7 +26,11 @@ export default function PageContentSection({
                 alignItems="center"
                 size={{ xs: 12, md: 4 }}
             >
-                <Typography variant="h4" {...titleProps} sx={{ fontWeight: 700, ...titleProps?.sx }}>
+                <Typography
+                    variant="h4"
+                    {...titleProps}
+                    sx={{ fontWeight: 700, ...titleProps?.sx }}
+                >
                     {title}
                 </Typography>
             </Grid>

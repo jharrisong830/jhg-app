@@ -1,31 +1,39 @@
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
+
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
+import PageHeader from "../components/pages/PageHeader";
+import PageContentSection from "../components/pages/PageContentSection";
 
 export default function Error() {
+    const location = useLocation();
+
     return (
         <main>
-            <div className="px-4 py-5 text-center">
-                <h1 className="display-3 fw-normal">Error</h1>
-                <p className="lead">Something went wrong when trying to load this page.</p>
-            </div>
+            <PageHeader
+                title="Error."
+                titleProps={{ color: "error" }}
+                subtitle="Something went wrong when trying to load this page."
+            />
 
-            <div className="container py-5">
-                <div className="row flex-md-row align-items-center">
-                    <div className="col-md-4 pb-2 pb-md-0 mt-5 mt-md-0">
-                        <h1 className="display-4 fw-bold text-start">
-                            Page not found.
-                        </h1>
-                    </div>
-                    <div className="col-md-8">
-                        <p>
-                            This page doesn't exist. If you think this is an issue, let me know!
-                        </p>
-
-                        <Link to="/" className="btn btn-light">
-                            Back to Home
-                        </Link>
-                    </div>
-                </div>
-            </div>
+            <PageContentSection
+                title="Page not found."
+                titleProps={{ color: "error" }}
+            >
+                <Typography variant="body1" component="p">
+                    The page <code>{location.pathname}</code> doesn't exist. If
+                    you think this is an issue, let me know!
+                </Typography>
+                <Button
+                    variant="contained"
+                    component={Link}
+                    to="/"
+                    sx={{ alignSelf: "flex-start", width: "auto" }}
+                >
+                    Back to Home
+                </Button>
+            </PageContentSection>
         </main>
     );
 }

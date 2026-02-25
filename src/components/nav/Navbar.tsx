@@ -1,75 +1,98 @@
-import { Link } from "react-router";
-import { Navbar as NB, Nav, Container } from "react-bootstrap";
+import { useState } from "react";
 
-/**
- * returns true if the current path is the same as the target path (i.e. current path is active)
- *
- * @param {string} currPath
- * @param {string} target
- *
- * @returns {boolean}
- */
-const isActive = (currPath: string, target: string): boolean => {
-    if (currPath.endsWith("/") && currPath.length !== 1)
-        currPath = currPath.slice(0, currPath.length - 1);
-    return currPath === target; // check for trailing
-};
+import { Link } from "react-router";
+
+import AppBar from "@mui/material/AppBar";
+import Grid from "@mui/material/Grid";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
 
 export default function Navbar() {
+    const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
+
+    const handleOpenMenu = (event: React.MouseEvent<HTMLElement>) => {
+        setMenuAnchor(event.currentTarget);
+    };
+
+    const handleCloseMenu = () => setMenuAnchor(null);
+
     return (
-        <NB expand="md" sticky="top" className="customNav px-1">
-            <Container className="m-0" fluid>
-                <NB.Brand
-                    as={Link}
-                    className="fw-bold"
-                    to={isActive(window.location.pathname, "/") ? "#" : "/"}
-                >
-                    jhg.app
-                </NB.Brand>
-                <NB.Toggle aria-controls="basic-navbar-nav" />
-                <NB.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                        <Nav.Link
-                            as={Link}
-                            className={
-                                "px-2 mx-2" +
-                                (isActive(window.location.pathname, "/projects")
-                                    ? " active"
-                                    : "")
-                            }
-                            to={
-                                isActive(window.location.pathname, "/projects")
-                                    ? "#"
-                                    : "/projects"
-                            }
+        <Grid container>
+            <AppBar position="static" elevation={0}>
+                <Toolbar>
+                    <Grid
+                        display="flex"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        size="auto"
+                        mr={2}
+                    >
+                        <Typography
+                            variant="h5"
+                            component={Link}
+                            sx={{
+                                color: "inherit",
+                                fontWeight: 700,
+                                textDecoration: "none"
+                            }}
+                            to="/"
                         >
+                            jhg.app
+                        </Typography>
+                    </Grid>
+
+                    <Grid
+                        display={{ xs: "none", sm: "flex" }}
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        size="grow"
+                    >
+                        <Button color="inherit" component={Link} to="/projects">
                             Projects
-                        </Nav.Link>
-                        <Nav.Link
-                            as={Link}
-                            className={
-                                "px-2 mx-2" +
-                                (isActive(
-                                    window.location.pathname,
-                                    "/json-table"
-                                )
-                                    ? " active"
-                                    : "")
-                            }
-                            to={
-                                isActive(
-                                    window.location.pathname,
-                                    "/json-table"
-                                )
-                                    ? "#"
-                                    : "/json-table"
-                            }
+                        </Button>
+                    </Grid>
+
+                    <Grid
+                        display={{ xs: "flex", sm: "none" }}
+                        justifyContent="flex-end"
+                        alignItems="center"
+                        size="grow"
+                    >
+                        <IconButton
+                            size="large"
+                            color="inherit"
+                            onClick={handleOpenMenu}
                         >
-                            JSONTable
-                        </Nav.Link>
-                    </Nav>
-                </NB.Collapse>
-            </Container>
-        </NB>
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            anchorEl={menuAnchor}
+                            open={menuAnchor !== null}
+                            onClose={handleCloseMenu}
+                        >
+                            <MenuItem
+                                component={Link}
+                                to="/"
+                                onClick={handleCloseMenu}
+                            >
+                                Home
+                            </MenuItem>
+                            <MenuItem
+                                component={Link}
+                                to="/projects"
+                                onClick={handleCloseMenu}
+                            >
+                                Projects
+                            </MenuItem>
+                        </Menu>
+                    </Grid>
+                </Toolbar>
+            </AppBar>
+        </Grid>
     );
 }

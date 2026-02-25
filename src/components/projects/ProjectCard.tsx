@@ -12,10 +12,12 @@ export default function ProjectCard({ project }: { project: ProjectContent }) {
             variant="outlined"
             sx={{
                 color: "primary.contrastText",
-                backgroundColor: "#484261",
+                backgroundColor: "#212529",
                 height: "100%",
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "column",
+                px: 1,
+                pb: 2
             }}
         >
             <CardContent sx={{ flex: 1 }}>

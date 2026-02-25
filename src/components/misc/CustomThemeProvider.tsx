@@ -47,6 +47,18 @@ const theme = createTheme({
             defaultProps: {
                 disableElevation: true,
                 color: "secondary"
+            },
+            styleOverrides: {
+                root: {
+                    borderRadius: 4
+                }
+            }
+        },
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 10
+                }
             }
         }
     }

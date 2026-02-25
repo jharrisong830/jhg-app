@@ -26,6 +26,7 @@ export default function PageContentSection({
                 justifyContent={getTitleAlign(rowReverse)}
                 alignItems="center"
                 size={{ xs: 12, md: 4 }}
+                pb={{ xs: 2, md: 0 }}
             >
                 <Typography
                     variant="h4"

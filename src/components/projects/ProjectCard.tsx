@@ -12,7 +12,6 @@ export default function ProjectCard({ project }: { project: ProjectContent }) {
             variant="outlined"
             sx={{
                 color: "primary.contrastText",
-                backgroundColor: "#212529",
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",

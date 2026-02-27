@@ -67,6 +67,7 @@ export default function Navbar() {
                             size="large"
                             color="inherit"
                             onClick={handleOpenMenu}
+                            aria-label="Open navigation menu"
                         >
                             <MenuIcon />
                         </IconButton>

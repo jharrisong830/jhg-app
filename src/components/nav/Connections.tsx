@@ -2,9 +2,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 
-import MergeIcon from "@mui/icons-material/Merge";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import WorkIcon from "@mui/icons-material/Work";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Connections() {
     return (
@@ -45,7 +45,7 @@ export default function Connections() {
                         rel="noreferrer"
                         variant="contained"
                         size="large"
-                        startIcon={<MergeIcon />}
+                        startIcon={<GitHubIcon />}
                     >
                         GitHub
                     </Button>
@@ -81,7 +81,7 @@ export default function Connections() {
                         rel="noreferrer"
                         variant="contained"
                         size="large"
-                        startIcon={<WorkIcon />}
+                        startIcon={<LinkedInIcon />}
                     >
                         LinkedIn
                     </Button>

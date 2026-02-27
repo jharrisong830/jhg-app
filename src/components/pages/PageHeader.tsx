@@ -26,6 +26,7 @@ export default function PageHeader({
                 <Typography
                     variant="h2"
                     component="h1"
+                    align="center"
                     {...titleProps}
                     sx={{
                         fontWeight: shouldEmphasizeTitle ? 700 : 500,
@@ -44,6 +45,7 @@ export default function PageHeader({
                 <Typography
                     variant="h6"
                     component="p"
+                    align="center"
                     {...subtitleProps}
                     sx={{ fontWeight: 500, ...subtitleProps?.sx }}
                 >

@@ -6,8 +6,7 @@ const theme = createTheme({
             secondary: "#DEE2E6"
         },
         background: {
-            default: "#253863",
-            paper: "#212529"
+            default: "#253863"
         },
         primary: {
             main: "#253863"
@@ -58,7 +57,8 @@ const theme = createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    borderRadius: 10
+                    borderRadius: 10,
+                    background: "#212529"
                 }
             }
         }

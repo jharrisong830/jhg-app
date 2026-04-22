@@ -1,8 +1,8 @@
 import Stack from "@mui/material/Stack";
 
-import ProjectCard from "../components/projects/ProjectCard";
-import projects from "../util/projects";
-import PageHeader from "../components/pages/PageHeader";
+import ProjectCard from "@/components/projects/ProjectCard";
+import projects from "@/util/projects";
+import PageHeader from "@/components/pages/PageHeader";
 
 export default function Projects() {
     return (

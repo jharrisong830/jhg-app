@@ -2,8 +2,7 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 
-const getContentAlign = (rowReverse: boolean) =>
-    rowReverse ? "end" : "start";
+const getContentAlign = (rowReverse: boolean) => (rowReverse ? "end" : "start");
 
 export default function PageContentSection({
     title,
@@ -17,10 +16,20 @@ export default function PageContentSection({
     titleProps?: TypographyProps;
 }) {
     return (
-        <Grid container direction={rowReverse ? "row-reverse" : "row"} sx={{ p: 4 }}>
+        <Grid
+            container
+            direction={rowReverse ? "row-reverse" : "row"}
+            sx={{ p: 4 }}
+        >
             <Grid
                 size={{ xs: 12, md: 4 }}
-                sx={{ display: "flex", textAlign: getContentAlign(rowReverse), justifyContent: getContentAlign(rowReverse), alignItems: "center", pb: { xs: 2, md: 0 } }}
+                sx={{
+                    display: "flex",
+                    textAlign: getContentAlign(rowReverse),
+                    justifyContent: getContentAlign(rowReverse),
+                    alignItems: "center",
+                    pb: { xs: 2, md: 0 }
+                }}
             >
                 <Typography
                     variant="h4"

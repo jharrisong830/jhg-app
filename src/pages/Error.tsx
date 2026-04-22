@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import PageHeader from "../components/pages/PageHeader";
-import PageContentSection from "../components/pages/PageContentSection";
+import PageHeader from "@//components/pages/PageHeader";
+import PageContentSection from "@//components/pages/PageContentSection";
 
 export default function Error() {
     const location = useLocation();

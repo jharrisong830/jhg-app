@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import { type ProjectContent } from "../../util/projects";
+import { type ProjectContent } from "@/util/projects";
 
 export default function ProjectCard({ project }: { project: ProjectContent }) {
     return (

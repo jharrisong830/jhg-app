@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid";
 
-import ProjectCard from "./ProjectCard";
-import projects from "../../util/projects";
+import ProjectCard from "@/components/projects/ProjectCard";
+import projects from "@/util/projects";
 
 export default function ProjectSpotlight() {
     return (

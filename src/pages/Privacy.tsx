@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 
-import PageHeader from "../components/pages/PageHeader";
-import PageContentSection from "../components/pages/PageContentSection";
+import PageHeader from "@/components/pages/PageHeader";
+import PageContentSection from "@/components/pages/PageContentSection";
 
 export default function Privacy() {
     return (

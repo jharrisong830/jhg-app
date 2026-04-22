@@ -8,13 +8,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Connections() {
     return (
-        <Grid container p={4}>
+        <Grid container sx={{ p: 4 }}>
             <Grid
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
                 size={12}
-                mb={2}
+                sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 2 }}
             >
                 <Typography
                     variant="h6"
@@ -27,17 +24,13 @@ export default function Connections() {
 
             <Grid
                 container
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
                 size={12}
                 spacing={2}
+                sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
             >
                 <Grid
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
                     size="auto"
+                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
                 >
                     <Button
                         href="https://github.com/jharrisong830"
@@ -52,10 +45,8 @@ export default function Connections() {
                 </Grid>
 
                 <Grid
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
                     size="auto"
+                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
                 >
                     <Button
                         href="mailto:john@jhg.app"
@@ -70,10 +61,8 @@ export default function Connections() {
                 </Grid>
 
                 <Grid
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
                     size="auto"
+                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
                 >
                     <Button
                         href="https://linkedin.com/in/johngraham830"

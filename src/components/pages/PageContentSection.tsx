@@ -17,14 +17,10 @@ export default function PageContentSection({
     titleProps?: TypographyProps;
 }) {
     return (
-        <Grid container direction={rowReverse ? "row-reverse" : "row"} p={4}>
+        <Grid container direction={rowReverse ? "row-reverse" : "row"} sx={{ p: 4 }}>
             <Grid
-                display="flex"
-                textAlign={getContentAlign(rowReverse)}
-                justifyContent={getContentAlign(rowReverse)}
-                alignItems="center"
                 size={{ xs: 12, md: 4 }}
-                pb={{ xs: 2, md: 0 }}
+                sx={{ display: "flex", textAlign: getContentAlign(rowReverse), justifyContent: getContentAlign(rowReverse), alignItems: "center", pb: { xs: 2, md: 0 } }}
             >
                 <Typography
                     variant="h4"
@@ -34,7 +30,7 @@ export default function PageContentSection({
                     {title}
                 </Typography>
             </Grid>
-            <Grid alignItems="center" size={{ xs: 12, md: 8 }}>
+            <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
                 <Stack spacing={2}>{children}</Stack>
             </Grid>
         </Grid>

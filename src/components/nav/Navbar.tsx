@@ -26,11 +26,8 @@ export default function Navbar() {
             <AppBar position="static" elevation={0}>
                 <Toolbar>
                     <Grid
-                        display="flex"
-                        justifyContent="flex-start"
-                        alignItems="center"
                         size="auto"
-                        mr={2}
+                        sx={{ display: "flex", justifyContent: "flex-start", alignItems: "center", mr: 2 }}
                     >
                         <Typography
                             variant="h5"
@@ -47,10 +44,8 @@ export default function Navbar() {
                     </Grid>
 
                     <Grid
-                        display={{ xs: "none", sm: "flex" }}
-                        justifyContent="flex-start"
-                        alignItems="center"
                         size="grow"
+                        sx={{ display: { xs: "none", sm: "flex" }, justifyContent: "flex-start", alignItems: "center" }}
                     >
                         <Button color="inherit" component={Link} to="/projects">
                             Projects
@@ -58,10 +53,8 @@ export default function Navbar() {
                     </Grid>
 
                     <Grid
-                        display={{ xs: "flex", sm: "none" }}
-                        justifyContent="flex-end"
-                        alignItems="center"
                         size="grow"
+                        sx={{ display: { xs: "flex", sm: "none" }, justifyContent: "flex-end", alignItems: "center" }}
                     >
                         <IconButton
                             size="large"

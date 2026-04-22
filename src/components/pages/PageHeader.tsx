@@ -15,13 +15,10 @@ export default function PageHeader({
     subtitleProps?: TypographyProps;
 }) {
     return (
-        <Grid container p={4}>
+        <Grid container sx={{ p: 4 }}>
             <Grid
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
                 size={12}
-                mb={1}
+                sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 1 }}
             >
                 <Typography
                     variant="h2"
@@ -37,10 +34,8 @@ export default function PageHeader({
                 </Typography>
             </Grid>
             <Grid
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
                 size={12}
+                sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
             >
                 <Typography
                     variant="h6"

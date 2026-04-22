@@ -12,7 +12,7 @@ export default function Projects() {
                 subtitle="Some of my personal and academic projects."
             />
 
-            <Stack spacing={2} p={4}>
+            <Stack spacing={2} sx={{ p: 4 }}>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} project={project} />
                 ))}

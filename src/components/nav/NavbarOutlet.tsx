@@ -1,12 +1,19 @@
+import { useLayoutEffect } from "react";
 import Connections from "./Connections";
 import Navbar from "./Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import CustomThemeProvider from "../misc/CustomThemeProvider";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 
 export default function NavbarOutlet() {
+    const { pathname } = useLocation();
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <CustomThemeProvider>
             <CssBaseline />

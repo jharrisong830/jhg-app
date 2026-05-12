@@ -1,11 +1,10 @@
-import { Link } from "react-router";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 import ProjectSpotlight from "../components/projects/ProjectSpotlight";
 import CurrentFavoriteMusic from "../components/misc/CurrentFavoriteMusic";
 import PageHeader from "../components/pages/PageHeader";
 import PageContentSection from "../components/pages/PageContentSection";
+import EmptyCardButtonWrapper from "@/components/misc/EmptyCardButtonWrapper";
 
 export default function Home() {
     return (
@@ -50,14 +49,7 @@ export default function Home() {
 
             <PageContentSection title="Project Spotlight." rowReverse>
                 <ProjectSpotlight />
-                <Button
-                    variant="contained"
-                    component={Link}
-                    to="/projects"
-                    sx={{ alignSelf: "flex-start", width: "auto" }}
-                >
-                    View Projects
-                </Button>
+                <EmptyCardButtonWrapper buttonLink="/projects" buttonText="View Projects" />
             </PageContentSection>
 
             <PageContentSection title="What I'm listening to.">

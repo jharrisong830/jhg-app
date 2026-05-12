@@ -3,6 +3,9 @@ import Grid from "@mui/material/Grid";
 import ProjectCard from "./ProjectCard";
 import projects from "../../util/projects";
 
+/**
+ * a selection of the two most recent projects to be displayed as cards on the home page
+ */
 export default function ProjectSpotlight() {
     return (
         <Grid container spacing={2}>

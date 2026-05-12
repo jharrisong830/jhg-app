@@ -65,6 +65,9 @@ const theme = createTheme({
     }
 });
 
+/**
+ * theme provider for the entire app (provides color scheme and some component style overrides)
+ */
 export default function CustomThemeProvider({
     children
 }: {

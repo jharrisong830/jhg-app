@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 
 import { type ProjectContent } from "../../util/projects";
 
+/**
+ * card to display project details
+ */
 export default function ProjectCard({ project }: { project: ProjectContent }) {
     return (
         <Card

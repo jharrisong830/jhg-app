@@ -7,6 +7,9 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 
+/**
+ * outlet that wraps all pages, so that they include the navbar, connections footer, and scroll behavior on navigation
+ */
 export default function NavbarOutlet() {
     const { pathname } = useLocation();
 

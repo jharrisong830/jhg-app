@@ -6,6 +6,9 @@ import PageHeader from "../components/pages/PageHeader";
 import PageContentSection from "../components/pages/PageContentSection";
 import EmptyCardButtonWrapper from "@/components/misc/EmptyCardButtonWrapper";
 
+/**
+ * home page that renders at domain root
+ */
 export default function Home() {
     return (
         <main>

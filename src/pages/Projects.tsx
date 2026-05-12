@@ -4,6 +4,9 @@ import ProjectCard from "../components/projects/ProjectCard";
 import projects from "../util/projects";
 import PageHeader from "../components/pages/PageHeader";
 
+/**
+ * full list of projects with their details
+ */
 export default function Projects() {
     return (
         <main>

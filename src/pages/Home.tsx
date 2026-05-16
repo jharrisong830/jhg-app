@@ -1,9 +1,9 @@
 import Typography from "@mui/material/Typography";
 
-import ProjectSpotlight from "../components/projects/ProjectSpotlight";
-import CurrentFavoriteMusic from "../components/misc/CurrentFavoriteMusic";
-import PageHeader from "../components/pages/PageHeader";
-import PageContentSection from "../components/pages/PageContentSection";
+import ProjectSpotlight from "@/components/projects/ProjectSpotlight";
+import CurrentFavoriteMusic from "@/components/misc/CurrentFavoriteMusic";
+import PageHeader from "@/components/pages/PageHeader";
+import PageContentSection from "@/components/pages/PageContentSection";
 import EmptyCardButtonWrapper from "@/components/misc/EmptyCardButtonWrapper";
 
 /**

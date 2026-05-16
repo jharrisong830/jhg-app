@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-import PageHeader from "../components/pages/PageHeader";
-import PageContentSection from "../components/pages/PageContentSection";
+import PageHeader from "@//components/pages/PageHeader";
+import PageContentSection from "@//components/pages/PageContentSection";
 
 /**
  * error page that loads for routes that are not matched

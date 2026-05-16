@@ -21,7 +21,12 @@ export default function PageHeader({
         <Grid container sx={{ p: 4 }}>
             <Grid
                 size={12}
-                sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 1 }}
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    mb: 1
+                }}
             >
                 <Typography
                     variant="h2"
@@ -38,7 +43,11 @@ export default function PageHeader({
             </Grid>
             <Grid
                 size={12}
-                sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}
             >
                 <Typography
                     variant="h6"

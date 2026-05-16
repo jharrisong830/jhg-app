@@ -14,7 +14,12 @@ export default function Connections() {
         <Grid container sx={{ p: 4 }}>
             <Grid
                 size={12}
-                sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 2 }}
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    mb: 2
+                }}
             >
                 <Typography
                     variant="h6"
@@ -29,11 +34,19 @@ export default function Connections() {
                 container
                 size={12}
                 spacing={2}
-                sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}
             >
                 <Grid
                     size="auto"
-                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}
                 >
                     <Button
                         href="https://github.com/jharrisong830"
@@ -49,7 +62,11 @@ export default function Connections() {
 
                 <Grid
                     size="auto"
-                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}
                 >
                     <Button
                         href="mailto:john@jhg.app"
@@ -65,7 +82,11 @@ export default function Connections() {
 
                 <Grid
                     size="auto"
-                    sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}
                 >
                     <Button
                         href="https://linkedin.com/in/johngraham830"

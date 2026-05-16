@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import PageHeader from "@//components/pages/PageHeader";
 import PageContentSection from "@//components/pages/PageContentSection";
 
+/**
+ * error page that loads for routes that are not matched
+ */
 export default function Error() {
     const location = useLocation();
 

@@ -12,6 +12,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
+/**
+ * responsive navbar with a hamburger menu on small screens and a horizontal menu on larger screens
+ */
 export default function Navbar() {
     const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null);
 

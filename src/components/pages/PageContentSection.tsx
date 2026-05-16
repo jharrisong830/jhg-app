@@ -4,6 +4,9 @@ import Typography, { type TypographyProps } from "@mui/material/Typography";
 
 const getContentAlign = (rowReverse: boolean) => (rowReverse ? "end" : "start");
 
+/**
+ * page section with title and content sections (rendered side-by-side on larger screens, and stacked on smaller screens)
+ */
 export default function PageContentSection({
     title,
     children,

@@ -1,6 +1,9 @@
 import Typography, { type TypographyProps } from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
+/**
+ * title and subtitle for a page
+ */
 export default function PageHeader({
     title,
     subtitle,

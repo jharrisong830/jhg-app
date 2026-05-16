@@ -1,3 +1,6 @@
+/**
+ * iframe for current favorites playlist embed
+ */
 export default function CurrentFavoriteMusic() {
     return (
         <iframe

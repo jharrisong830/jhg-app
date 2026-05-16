@@ -3,6 +3,9 @@ import Typography from "@mui/material/Typography";
 import PageHeader from "@/components/pages/PageHeader";
 import PageContentSection from "@/components/pages/PageContentSection";
 
+/**
+ * privacy policy page for my applications
+ */
 export default function Privacy() {
     return (
         <main>

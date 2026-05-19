@@ -1,8 +1,8 @@
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 
-import PageHeader from '@/components/pages/PageHeader';
-import PageContentSection from '@/components/pages/PageContentSection';
-import CurrentFavoriteMusic from '@/components/misc/CurrentFavoriteMusic';
+import PageHeader from "@/components/pages/PageHeader";
+import PageContentSection from "@/components/pages/PageContentSection";
+import CurrentFavoriteMusic from "@/components/misc/CurrentFavoriteMusic";
 
 export default function Music() {
     return (
@@ -16,5 +16,5 @@ export default function Music() {
                 <CurrentFavoriteMusic />
             </PageContentSection>
         </main>
-    )
+    );
 }

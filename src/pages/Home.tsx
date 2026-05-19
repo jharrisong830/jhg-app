@@ -52,7 +52,10 @@ export default function Home() {
 
             <PageContentSection title="Project Spotlight." rowReverse>
                 <ProjectSpotlight />
-                <EmptyCardButtonWrapper buttonLink="/projects" buttonText="View Projects" />
+                <EmptyCardButtonWrapper
+                    buttonLink="/projects"
+                    buttonText="View Projects"
+                />
             </PageContentSection>
 
             <PageContentSection title="What I'm listening to.">

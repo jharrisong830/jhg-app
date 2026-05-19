@@ -61,7 +61,16 @@ export default function Navbar() {
                             alignItems: "center"
                         }}
                     >
-                        {navPages.map(page => <Button key={page.path} color="inherit" component={Link} to={page.path}>{page.title}</Button>)}
+                        {navPages.map((page) => (
+                            <Button
+                                key={page.path}
+                                color="inherit"
+                                component={Link}
+                                to={page.path}
+                            >
+                                {page.title}
+                            </Button>
+                        ))}
                     </Grid>
 
                     <Grid
@@ -85,7 +94,16 @@ export default function Navbar() {
                             open={menuAnchor !== null}
                             onClose={handleCloseMenu}
                         >
-                            {allPages.map(page => <MenuItem key={page.path} component={Link} to={page.path} onClick={handleCloseMenu}>{page.title}</MenuItem>)}
+                            {allPages.map((page) => (
+                                <MenuItem
+                                    key={page.path}
+                                    component={Link}
+                                    to={page.path}
+                                    onClick={handleCloseMenu}
+                                >
+                                    {page.title}
+                                </MenuItem>
+                            ))}
                         </Menu>
                     </Grid>
                 </Toolbar>

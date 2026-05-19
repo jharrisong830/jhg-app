@@ -1,7 +1,7 @@
 export interface NavPage {
     path: string;
     title: string;
-};
+}
 
 export const navPages: Array<NavPage> = [
     {
@@ -20,4 +20,3 @@ export const allPages: Array<NavPage> = [
         title: "Home"
     }
 ].concat(navPages);
-

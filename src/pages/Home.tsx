@@ -1,10 +1,12 @@
 import Typography from "@mui/material/Typography";
 
 import ProjectSpotlight from "@/components/projects/ProjectSpotlight";
-import CurrentFavoriteMusic from "@/components/misc/CurrentFavoriteMusic";
+import PlaylistEmbed from "@/components/misc/PlaylistEmbed";
 import PageHeader from "@/components/pages/PageHeader";
 import PageContentSection from "@/components/pages/PageContentSection";
 import EmptyCardButtonWrapper from "@/components/misc/EmptyCardButtonWrapper";
+
+import { currentFavorites } from "@/util/music";
 
 /**
  * home page that renders at domain root
@@ -58,8 +60,8 @@ export default function Home() {
                 />
             </PageContentSection>
 
-            <PageContentSection title="What I'm listening to.">
-                <CurrentFavoriteMusic />
+            <PageContentSection title={currentFavorites.pageContentTitle}>
+                <PlaylistEmbed src={currentFavorites.src} />
             </PageContentSection>
         </main>
     );

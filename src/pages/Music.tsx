@@ -1,9 +1,12 @@
-import Typography from "@mui/material/Typography";
-
 import PageHeader from "@/components/pages/PageHeader";
 import PageContentSection from "@/components/pages/PageContentSection";
-import CurrentFavoriteMusic from "@/components/misc/CurrentFavoriteMusic";
+import PlaylistEmbed from "@/components/misc/PlaylistEmbed";
 
+import playlistEmbeds from "@/util/music";
+
+/**
+ * showcase for my (questionable) music taste
+ */
 export default function Music() {
     return (
         <main>
@@ -12,9 +15,15 @@ export default function Music() {
                 subtitle="More of what I'm listening to."
             />
 
-            <PageContentSection title="What I'm listening to.">
-                <CurrentFavoriteMusic />
-            </PageContentSection>
+            {playlistEmbeds.map((playlist, idx) => (
+                <PageContentSection
+                    key={playlist.pageContentTitle}
+                    title={playlist.pageContentTitle}
+                    rowReverse={idx % 2 === 1}
+                >
+                    <PlaylistEmbed src={playlist.src} />
+                </PageContentSection>
+            ))}
         </main>
     );
 }

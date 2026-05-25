@@ -5,6 +5,7 @@ import Home from "@/pages/Home";
 import Error from "@/pages/Error";
 import Privacy from "@/pages/Privacy";
 import Projects from "@/pages/Projects";
+import Music from "@/pages/Music";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/privacy",
                 element: <Privacy />
+            },
+            {
+                path: "/music",
+                element: <Music />
             },
             {
                 path: "*",

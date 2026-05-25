@@ -6,7 +6,13 @@ import Button from "@mui/material/Button";
 /**
  * used to align the left edge of the "View Projects" button with the left edge of the buttons inside of ProjectSpotlight -> ProjectCard
  */
-export default function EmptyCardButtonWrapper({ buttonLink, buttonText }: { buttonLink: string; buttonText: string }) {
+export default function EmptyCardButtonWrapper({
+    buttonLink,
+    buttonText
+}: {
+    buttonLink: string;
+    buttonText: string;
+}) {
     return (
         <Card
             variant="outlined"

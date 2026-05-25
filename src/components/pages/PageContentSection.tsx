@@ -9,11 +9,13 @@ const getContentAlign = (rowReverse: boolean) => (rowReverse ? "end" : "start");
  */
 export default function PageContentSection({
     title,
+    description,
     children,
     rowReverse = false,
     titleProps
 }: {
     title: string;
+    description?: string;
     children: React.ReactNode;
     rowReverse?: boolean;
     titleProps?: TypographyProps;
@@ -34,13 +36,16 @@ export default function PageContentSection({
                     pb: { xs: 2, md: 0 }
                 }}
             >
-                <Typography
-                    variant="h4"
-                    {...titleProps}
-                    sx={{ fontWeight: 700, ...titleProps?.sx }}
-                >
-                    {title}
-                </Typography>
+                <Stack spacing={2}>
+                    <Typography
+                        variant="h4"
+                        {...titleProps}
+                        sx={{ fontWeight: 700, ...titleProps?.sx }}
+                    >
+                        {title}
+                    </Typography>
+                    {description && <Typography>{description}</Typography>}
+                </Stack>
             </Grid>
             <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
                 <Stack spacing={2}>{children}</Stack>

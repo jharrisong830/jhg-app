@@ -12,6 +12,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 
+import { navPages, allPages } from "@/util/pages";
+
 /**
  * responsive navbar with a hamburger menu on small screens and a horizontal menu on larger screens
  */
@@ -59,9 +61,16 @@ export default function Navbar() {
                             alignItems: "center"
                         }}
                     >
-                        <Button color="inherit" component={Link} to="/projects">
-                            Projects
-                        </Button>
+                        {navPages.map((page) => (
+                            <Button
+                                key={page.path}
+                                color="inherit"
+                                component={Link}
+                                to={page.path}
+                            >
+                                {page.title}
+                            </Button>
+                        ))}
                     </Grid>
 
                     <Grid
@@ -85,20 +94,16 @@ export default function Navbar() {
                             open={menuAnchor !== null}
                             onClose={handleCloseMenu}
                         >
-                            <MenuItem
-                                component={Link}
-                                to="/"
-                                onClick={handleCloseMenu}
-                            >
-                                Home
-                            </MenuItem>
-                            <MenuItem
-                                component={Link}
-                                to="/projects"
-                                onClick={handleCloseMenu}
-                            >
-                                Projects
-                            </MenuItem>
+                            {allPages.map((page) => (
+                                <MenuItem
+                                    key={page.path}
+                                    component={Link}
+                                    to={page.path}
+                                    onClick={handleCloseMenu}
+                                >
+                                    {page.title}
+                                </MenuItem>
+                            ))}
                         </Menu>
                     </Grid>
                 </Toolbar>

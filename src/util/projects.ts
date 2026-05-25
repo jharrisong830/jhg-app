@@ -8,6 +8,13 @@ export interface ProjectContent {
 
 const projects: Array<ProjectContent> = [
     {
+        title: "spring-dotfile-manager",
+        subtitle: "Dotfile management CLI in Java + Spring Boot",
+        description: "A utility to help manage the mapping of dotfiles from a source repository to their respective locations on the filesystem. Provides support for multiple platforms, and the ability to customize dotfile locations per-platform.",
+        link: "https://github.com/jharrisong830/spring-dotfile-manager",
+        linkText: "View on GitHub"
+    },
+    {
         title: "SimpleMusic Transfer",
         subtitle: "Swift/Web API Playlist Transfer App",
         description:

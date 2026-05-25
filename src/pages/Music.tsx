@@ -12,7 +12,7 @@ export default function Music() {
         <main>
             <PageHeader
                 title="Music."
-                subtitle="More of what I'm listening to."
+                subtitle="Playlists, albums, and artists that I'm into."
             />
 
             {playlistEmbeds.map((playlist, idx) => (
@@ -20,6 +20,7 @@ export default function Music() {
                     key={playlist.pageContentTitle}
                     title={playlist.pageContentTitle}
                     rowReverse={idx % 2 === 1}
+                    description={playlist.pageContnetDescription}
                 >
                     <PlaylistEmbed src={playlist.src} />
                 </PageContentSection>

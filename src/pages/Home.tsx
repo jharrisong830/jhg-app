@@ -62,6 +62,10 @@ export default function Home() {
 
             <PageContentSection title={currentFavorites.pageContentTitle}>
                 <PlaylistEmbed src={currentFavorites.src} />
+                <EmptyCardButtonWrapper
+                    buttonLink="/music"
+                    buttonText="View Music"
+                />
             </PageContentSection>
         </main>
     );
